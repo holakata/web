@@ -39,7 +39,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .acceso:hover{border-color:var(--coral);color:#fff}
 
 /* ---------- hero ---------- */
-.hero{position:relative;padding:58px 0 30px;overflow:hidden}
+.hero{position:relative;padding:58px 0 76px;overflow:hidden}
 .hero .wrap{position:relative}
 .glow1{position:absolute;width:560px;height:420px;right:-220px;top:-140px;background:radial-gradient(closest-side,#20355f,transparent 70%);pointer-events:none}
 .glow2{position:absolute;width:620px;height:520px;left:-280px;top:380px;background:radial-gradient(closest-side,#16294e,transparent 70%);pointer-events:none}
@@ -226,12 +226,22 @@ footer a{color:#9fb0cf;font-weight:600}
 .chead2 .tag{margin:0}
 .clogo{width:54px;height:54px;border-radius:14px;object-fit:contain;padding:5px;flex:none;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.2)}
 
-/* texto centrado */
-.hero .wrap,.sechead,#demotxt{text-align:center}
-.sechead,.hsub{margin-left:auto;margin-right:auto}
-.cta,.chips{justify-content:center}
-.mvc{text-align:left}
-.hgrid>div:last-child{text-align:center}
+/* tipografía: subtítulos y títulos a la izquierda, descripciones justificadas */
+.hsub,#dP,.mvc p,.historia .txt,.caso p{text-align:justify}
+
+/* mini diseños representativos de cada cliente */
+.mockj{margin-top:16px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 22px rgba(13,27,54,.14);max-width:300px}
+.mockj .mjh{background:linear-gradient(145deg,#B8895A,#8a6238);color:#fff;padding:12px 14px}
+.mockj .mjh b{font-family:var(--tit);font-size:14.5px;display:block}
+.mockj .mjh span{font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.85}
+.mockj .mjs{display:flex;gap:9px;padding:13px 14px}
+.mockj .mjs i{width:26px;height:26px;border-radius:50%;border:2px dashed #cabfae}
+.mockj .mjs i.on{background:#B8895A;border:none;box-shadow:inset 0 -3px 5px rgba(0,0,0,.18)}
+.mockb{margin-top:16px;background:#0f0d0b;border:1px solid #3a2f1f;border-radius:16px;padding:14px;display:flex;gap:12px;align-items:center;max-width:300px;box-shadow:0 10px 22px rgba(0,0,0,.3)}
+.mockb .bbi{width:40px;height:40px;border-radius:50%;flex:none;background:linear-gradient(145deg,#c9a86a,#8a6b33);display:grid;place-items:center;font-family:var(--tit);font-weight:800;font-size:14px;color:#201709}
+.mockb b{font-family:var(--tit);font-size:14.5px;color:#f4ead8;display:block}
+.mockb span{font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:#c9a86a}
+.clogo.oscuro{background:#17130c}
 </style>
 </head>
 <body>
@@ -251,13 +261,6 @@ footer a{color:#9fb0cf;font-weight:600}
    <a class="bwa" href="https://wa.me/50767929782?text=Hola%20Kata%2C%20quiero%20saber%20m%C3%A1s%20para%20mi%20negocio">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.3.4c-.1.2-.2.3 0 .6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.8 1.7.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.4 0 .1 0 .7-.4 1.5Z"/></svg>
     Escríbenos por WhatsApp</a>
-  </div>
-  <div class="heromark" id="heromark">
-   <i></i><i></i><i></i>
-   <span class="hint">Toca<br>el sello</span>
-   <span class="ring" id="ring"></span>
-   <span class="stamp" id="stamp"></span>
-   <span class="contador" id="cont">+1</span>
   </div>
  </div>
 </header>
@@ -312,12 +315,12 @@ footer a{color:#9fb0cf;font-weight:600}
     <div class="pantalla" data-p="presenta">
      <div class="presc">
       <div class="kicker" style="color:#7fb3e3">kata presenta</div>
-      <div class="pfoto">BB</div>
-      <h4>Bavrak Bustamante</h4>
-      <div class="rol">Saxofonista · eventos</div>
+      <div class="pfoto">AV</div>
+      <h4>Ana Lucía Vega</h4>
+      <div class="rol">Fotógrafa de bodas</div>
       <div class="presbtns">
-       <span id="pwa"><b style="background:#1f8a4c22;color:#4cc078;border:1px solid #2a5c41">W</b>Escríbele por WhatsApp</span>
-       <span><b style="background:#8e75f022;color:#b4a3f5;border:1px solid #4a3d82">I</b>Síguelo en Instagram</span>
+       <span><b style="background:#1f8a4c22;color:#4cc078;border:1px solid #2a5c41">W</b>Escríbele por WhatsApp</span>
+       <span><b style="background:#8e75f022;color:#b4a3f5;border:1px solid #4a3d82">I</b>Mira su portafolio</span>
        <span id="pguardar"><b style="background:#3e8fd622;color:#7fb3e3;border:1px solid #2a5280">+</b>Guardar contacto</span>
       </div>
       <div class="guardado" id="guardado">✓ Guardado en tus contactos (es una demo)</div>
@@ -331,8 +334,8 @@ footer a{color:#9fb0cf;font-weight:600}
     <h2 id="dT" style="font-size:clamp(24px,6vw,32px)">El sello cae solo.</h2>
     <p id="dP">El negocio pone una tablet con un QR que cambia cada 30 segundos. Tu cliente lo escanea con la cámara, el sello cae y el premio llega sin cartones perdidos. Pruébalo: toca «Escanear».</p>
     <div class="mv" style="margin-top:20px">
-     <div class="mvc"><div class="k" id="dk1">Para quién</div><p id="dv1">Cafés, spas, barberías, fondas: todo negocio donde la gente vuelve.</p></div>
-     <div class="mvc"><div class="k" id="dk2">Qué incluye</div><p id="dv2">Tarjeta de sellos, tarjetas de regalo y panel de recepción con tu marca.</p></div>
+     <div class="mvc"><div class="k" id="dk1">Para quién</div><p id="dv1">Personas con un negocio donde los clientes vuelven seguido y quieren premiar esa fidelidad.</p></div>
+     <div class="mvc"><div class="k" id="dk2">Qué incluye</div><p id="dv2">Tu tarjeta con tu marca, premios a tu medida, panel para tu equipo y mucho más.</p></div>
     </div>
     <a class="dgo" id="dGo" href="https://tarjetas.holakata.com/">Conoce kata sellos →</a>
    </div>
@@ -347,14 +350,16 @@ footer a{color:#9fb0cf;font-weight:600}
  </div>
  <div class="cgrid">
   <div class="caso rev">
-   <div class="chead2"><img class="clogo" src="https://tarjetas.holakata.com/iconos/jazmin-logo.png" alt="Jazmin Center"><div><div class="tag">kata sellos · spa</div><h3>Jazmin Center</h3></div></div>
-   <p>Tarjeta de cliente frecuente y panel de recepción para un spa en Panamá: sellos por visita, premios y cumpleaños, todo con QR en el mostrador.</p>
-   <a class="go" href="https://tarjetas.holakata.com/t/?n=jazmin">Ver la tarjeta →</a>
+   <div class="chead2"><img class="clogo" src="img/jazmin.png" alt="Jazmin Center"><div><div class="tag">kata sellos · spa</div><h3>Jazmin Center</h3></div></div>
+   <p>Tarjeta de cliente frecuente, club de miembros y tarjetas de regalo para un spa en Panamá, con panel propio para su recepción.</p>
+   <div class="mockj"><div class="mjh"><b>Jazmin Center</b><span>Equilibrio, salud y bienestar</span></div><div class="mjs"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
+   <a class="go" href="https://www.instagram.com/jazminholisticcenter/">@jazminholisticcenter</a>
   </div>
   <div class="caso sax rev">
-   <div class="chead2"><img class="clogo" src="https://presenta.holakata.com/bk-sax/logo.png" alt="BK Sax"><div><div class="tag">kata presenta · música</div><h3>BK Sax</h3></div></div>
-   <p>La tarjeta digital de Bavrak Bustamante, saxofonista: su presentación, videos y contacto en un solo QR que muestra desde su celular.</p>
-   <a class="go" href="https://presenta.holakata.com/bk-sax/">Ver la tarjeta →</a>
+   <div class="chead2"><img class="clogo oscuro" src="img/bk.png" alt="BK Sax"><div><div class="tag">kata presenta · música</div><h3>BK Sax</h3></div></div>
+   <p>Tarjeta de presentación digital para un saxofonista de eventos: su música y su contacto en un solo QR que muestra desde el celular.</p>
+   <div class="mockb"><div class="bbi">BK</div><div><b>BK Sax</b><span>Saxofonista · eventos</span></div></div>
+   <a class="go" href="https://www.instagram.com/bk.saxx/">@bk.saxx</a>
   </div>
  </div>
 </div></section>
@@ -372,7 +377,7 @@ footer a{color:#9fb0cf;font-weight:600}
    <p class="txt">Todo QR tiene tres esquinas que lo hacen leíble; los técnicos las llaman sus «ojos». A los negocios les faltaba una: la del cliente que regresa. Esa la dibujamos nosotros, con un sello coral. Y no es casualidad que sean cuatro: Kata también somos nosotros — <b style="color:var(--hueso)">K</b>illian, <b style="color:var(--hueso)">A</b>melie, <b style="color:var(--hueso)">T</b>omás y <b style="color:var(--hueso)">A</b>dela. No es un nombre inventado: es nuestra familia, puesta en cada tarjeta que entregamos.</p>
    <div class="mv">
     <div class="mvc"><div class="k">Misión</div><p>Que cualquier negocio de Panamá, del tamaño que sea, tenga herramientas digitales que se sientan de marca grande.</p></div>
-    <div class="mvc"><div class="k">Visión</div><p>Ver una esquina coral en cada mostrador de Panamá: del café de barrio al spa, negocios a los que da gusto volver.</p></div>
+    <div class="mvc"><div class="k">Visión</div><p>Un Panamá donde el negocio de barrio compite de tú a tú con las grandes cadenas, porque la buena tecnología dejó de ser un lujo.</p></div>
    </div>
   </div>
  </div>
@@ -397,26 +402,16 @@ const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 /* reloj real */
 (function(){const d=new Date();let h=d.getHours()%12||12;$('#reloj').textContent=h+':'+String(d.getMinutes()).padStart(2,'0')})();
 
-/* hero: sello re-estampa */
-let vueltas=0;
-$('#heromark').addEventListener('click',()=>{
- const st=$('#stamp'),r=$('#ring'),c=$('#cont');
- st.classList.remove('re');r.classList.remove('go');void st.offsetWidth;
- st.classList.add('re');r.classList.add('go');
- vueltas++;c.textContent='+'+vueltas;c.classList.add('on');
- clearTimeout(c._t);c._t=setTimeout(()=>c.classList.remove('on'),1600);
-});
-
 /* reveals */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 $$('.rev').forEach(el=>io.observe(el));
 
 /* demo: cambio de producto */
 const textos={
- sellos:{T:'El sello cae solo.',P:'El negocio pone una tablet con un QR que cambia cada 30 segundos. Tu cliente lo escanea con la cámara, el sello cae y el premio llega sin cartones perdidos. Pruébalo: toca «Escanear».',k1:'Para quién',v1:'Cafés, spas, barberías, fondas: todo negocio donde la gente vuelve.',k2:'Qué incluye',v2:'Tarjeta de sellos, tarjetas de regalo y panel de recepción con tu marca.'},
- menu:{T:'Tu carta, siempre al día.',P:'Se acabó reimprimir menús. Cambias un precio o escondes un plato agotado desde tu celular y queda cambiado en todas las mesas al instante. Prueba las pestañas.',k1:'Para quién',v1:'Fondas, restaurantes, cafeterías y food trucks.',k2:'Qué incluye',v2:'Carta con tu marca, fotos de tus platos y cambios ilimitados.'},
- invita:{T:'Un sobre que se abre solo.',P:'Tus invitados reciben un enlace por WhatsApp: el sobre se abre, suena la música y confirman asistencia con un toque. Tú ves la lista en tiempo real. Toca el sobre.',k1:'Para quién',v1:'Bodas, quince años, baby showers y eventos de empresa.',k2:'Qué incluye',v2:'Invitación con tu diseño, confirmación de invitados y mapa.'},
- presenta:{T:'Tu tarjeta, un escaneo.',P:'Nada de tarjetas impresas que terminan en la basura. Muestras tu QR, lo escanean y te guardan en el celular con todo: WhatsApp, redes y tu trabajo. Así la usa BK Sax.',k1:'Para quién',v1:'Músicos, fotógrafos, makeup artists, agentes y profesionales.',k2:'Qué incluye',v2:'Tu página personal, QR para mostrar o imprimir y botón de guardar contacto.'}
+ sellos:{T:'El sello cae solo.',P:'El negocio pone una tablet con un QR que cambia cada 30 segundos. Tu cliente lo escanea con la cámara, el sello cae y el premio llega sin cartones perdidos. Pruébalo: toca «Escanear».',k1:'Para quién',v1:'Personas con un negocio donde los clientes vuelven seguido y quieren premiar esa fidelidad.',k2:'Qué incluye',v2:'Tu tarjeta con tu marca, premios a tu medida, panel para tu equipo y mucho más.'},
+ menu:{T:'Tu carta, siempre al día.',P:'Se acabó reimprimir menús. Cambias un precio o escondes un plato agotado desde tu celular y queda cambiado en todas las mesas al instante. Prueba las pestañas.',k1:'Para quién',v1:'Personas que cambian precios o platos seguido y no quieren volver a reimprimir una carta.',k2:'Qué incluye',v2:'Tu carta con tu identidad, fotos de tus platos y cambios al instante, sin límite.'},
+ invita:{T:'Un sobre que se abre solo.',P:'Tus invitados reciben un enlace por WhatsApp: el sobre se abre, suena la música y confirman asistencia con un toque. Tú ves la lista en tiempo real. Toca el sobre.',k1:'Para quién',v1:'Personas que celebran algo grande y quieren que la invitación esté a la altura del evento.',k2:'Qué incluye',v2:'Diseño a la medida, confirmación de invitados en tiempo real y mapa del lugar.'},
+ presenta:{T:'Tu tarjeta, un escaneo.',P:'Nada de tarjetas impresas que terminan en la basura. Muestras tu QR, lo escanean y te guardan en el celular con todo: tu contacto, tus redes y tu trabajo.',k1:'Para quién',v1:'Personas que viven de darse a conocer y quieren quedar guardadas en un celular en segundos.',k2:'Qué incluye',v2:'Tu página personal, el QR de tu tarjeta y muchas funciones más.'}
 };
 $('#chips').addEventListener('click',e=>{
  const ch=e.target.closest('.chip');if(!ch)return;
@@ -470,7 +465,6 @@ $('#invscene').addEventListener('click',()=>{
 
 /* demo presenta */
 $('#pguardar').addEventListener('click',()=>{$('#guardado').classList.add('on');setTimeout(()=>$('#guardado').classList.remove('on'),2600)});
-$('#pwa').addEventListener('click',()=>window.open('https://presenta.holakata.com/bk-sax/','_blank'));
 </script>
 </body>
 </html>
