@@ -191,7 +191,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .hgrid{display:grid;gap:36px;align-items:center}
 @media(min-width:800px){.hgrid{grid-template-columns:.9fr 1.1fr;gap:60px}}
 .fammark{position:relative;width:min(250px,62vw);aspect-ratio:1;margin:0 auto}
-.fammark .c{position:absolute;width:30%;height:30%;border:min(3vw,12px) solid #22355f;border-radius:20%;display:grid;place-items:center;cursor:pointer;transition:.3s;font-family:var(--tit);font-weight:800;font-size:15px;color:transparent}
+.fammark .c{position:absolute;width:30%;height:30%;border:min(3vw,12px) solid #2a4572;border-radius:20%;display:grid;place-items:center;transition:.3s;font-family:var(--tit);font-weight:800;font-size:17px;color:#8fa2c9}
 .fammark .c:hover,.fammark .c.on{border-color:var(--coral);color:var(--hueso);transform:scale(1.07)}
 .fammark .c:nth-child(1){top:0;left:0}.fammark .c:nth-child(2){top:0;right:0}.fammark .c:nth-child(3){bottom:0;left:0}
 .fammark .s{position:absolute;right:0;bottom:0;width:30%;aspect-ratio:1;background:var(--coral);border-radius:50%;display:grid;place-items:center;cursor:pointer;font-family:var(--tit);font-weight:800;font-size:15px;color:#fff;box-shadow:0 14px 30px rgba(255,107,87,.4),inset 0 -6px 10px rgba(0,0,0,.18);transition:.3s}
@@ -215,6 +215,23 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 footer{border-top:1px solid #1a2c50;padding:26px 0 36px;font-size:12.5px;color:#6d80a6}
 footer .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
 footer a{color:#9fb0cf;font-weight:600}
+
+/* enlaces de producto en la demo y logos de clientes */
+.dgo{display:inline-block;margin-top:20px;font-family:var(--tit);font-weight:700;font-size:14px;color:var(--pc,#FF6B57);border:1.5px solid color-mix(in srgb,var(--pc,#FF6B57) 50%,transparent);padding:12px 22px;border-radius:999px;transition:.25s}
+.dgo:hover{background:var(--pc,#FF6B57);color:#fff}
+#demotxt{--pc:#FF6B57}
+#demotxt .mvc .k{color:var(--pc)}
+.chead2{display:flex;gap:14px;align-items:center}
+.chead2 h3{margin-top:2px}
+.chead2 .tag{margin:0}
+.clogo{width:54px;height:54px;border-radius:14px;object-fit:contain;padding:5px;flex:none;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.2)}
+
+/* texto centrado */
+.hero .wrap,.sechead,#demotxt{text-align:center}
+.sechead,.hsub{margin-left:auto;margin-right:auto}
+.cta,.chips{justify-content:center}
+.mvc{text-align:left}
+.hgrid>div:last-child{text-align:center}
 </style>
 </head>
 <body>
@@ -234,7 +251,6 @@ footer a{color:#9fb0cf;font-weight:600}
    <a class="bwa" href="https://wa.me/50767929782?text=Hola%20Kata%2C%20quiero%20saber%20m%C3%A1s%20para%20mi%20negocio">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.1-4.7-4-4.9-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.3.4c-.1.2-.2.3 0 .6.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.8 1.7.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.6.4 0 .1 0 .7-.4 1.5Z"/></svg>
     Escríbenos por WhatsApp</a>
-   <a class="b2" href="#demo">Probar la demo ↓</a>
   </div>
   <div class="heromark" id="heromark">
    <i></i><i></i><i></i>
@@ -248,9 +264,8 @@ footer a{color:#9fb0cf;font-weight:600}
 
 <section class="demo" id="demo"><div class="wrap">
  <div class="sechead rev">
-  <div class="kicker">Pruébalo tú, aquí mismo</div>
-  <h2>No te lo contamos: tócalo.</h2>
-  <p>Esto es lo que vive tu cliente. Escoge un producto y juega con él.</p>
+  <div class="kicker">Lo que hacemos</div>
+  <h2>Un QR para cada cosa que tu negocio necesita.</h2>
  </div>
  <div class="chips rev" id="chips">
   <button class="chip on" data-p="sellos" style="--pc:#FF6B57;--ct:#fff"><b></b>sellos</button>
@@ -319,55 +334,25 @@ footer a{color:#9fb0cf;font-weight:600}
      <div class="mvc"><div class="k" id="dk1">Para quién</div><p id="dv1">Cafés, spas, barberías, fondas: todo negocio donde la gente vuelve.</p></div>
      <div class="mvc"><div class="k" id="dk2">Qué incluye</div><p id="dv2">Tarjeta de sellos, tarjetas de regalo y panel de recepción con tu marca.</p></div>
     </div>
+    <a class="dgo" id="dGo" href="https://tarjetas.holakata.com/">Conoce kata sellos →</a>
    </div>
-  </div>
- </div>
-</div></section>
-
-<section class="prods"><div class="wrap">
- <div class="sechead rev">
-  <div class="kicker">Lo que hacemos</div>
-  <h2>Un QR para cada cosa que tu negocio necesita.</h2>
- </div>
- <div class="pgrid">
-  <a class="pcard rev" style="--pc:#FF6B57" href="https://tarjetas.holakata.com/">
-   <div class="dot"></div><h3>kata sellos</h3>
-   <p>Cliente frecuente, tarjetas de regalo y membresías. Tu cliente escanea en el mostrador y el premio se gana solo.</p>
-   <span class="go">tarjetas.holakata.com →</span>
-  </a>
-  <a class="pcard rev" style="--pc:#3E8FD6" href="https://presenta.holakata.com/bk-sax/">
-   <div class="dot"></div><h3>kata presenta</h3>
-   <p>Tu tarjeta de presentación vive en un QR: la muestras, la escanean y te guardan en el celular al instante.</p>
-   <span class="go">presenta.holakata.com →</span>
-  </a>
-  <div class="pcard rev" style="--pc:#F4B860">
-   <div class="dot"></div><h3>kata menú</h3>
-   <p>Tu carta digital, siempre al día: cambias un precio desde el celular y queda cambiado en todas las mesas.</p>
-   <span class="pronto">Próximamente</span>
-  </div>
-  <div class="pcard rev" style="--pc:#8E75F0">
-   <div class="dot"></div><h3>kata invita</h3>
-   <p>Invitaciones web para bodas, quince años y eventos: se abren como un sobre y confirman asistencia solas.</p>
-   <span class="pronto">Próximamente</span>
   </div>
  </div>
 </div></section>
 
 <section class="casos"><div class="wrap">
  <div class="sechead rev">
-  <div class="kicker">Trabajo real</div>
+  <div class="kicker">Nuestros clientes</div>
   <h2>Ya está funcionando.</h2>
  </div>
  <div class="cgrid">
   <div class="caso rev">
-   <div class="tag">kata sellos · spa</div>
-   <h3>Jazmin Center</h3>
+   <div class="chead2"><img class="clogo" src="https://tarjetas.holakata.com/iconos/jazmin-logo.png" alt="Jazmin Center"><div><div class="tag">kata sellos · spa</div><h3>Jazmin Center</h3></div></div>
    <p>Tarjeta de cliente frecuente y panel de recepción para un spa en Panamá: sellos por visita, premios y cumpleaños, todo con QR en el mostrador.</p>
    <a class="go" href="https://tarjetas.holakata.com/t/?n=jazmin">Ver la tarjeta →</a>
   </div>
   <div class="caso sax rev">
-   <div class="tag">kata presenta · música</div>
-   <h3>BK Sax</h3>
+   <div class="chead2"><img class="clogo" src="https://presenta.holakata.com/bk-sax/logo.png" alt="BK Sax"><div><div class="tag">kata presenta · música</div><h3>BK Sax</h3></div></div>
    <p>La tarjeta digital de Bavrak Bustamante, saxofonista: su presentación, videos y contacto en un solo QR que muestra desde su celular.</p>
    <a class="go" href="https://presenta.holakata.com/bk-sax/">Ver la tarjeta →</a>
   </div>
@@ -380,15 +365,14 @@ footer a{color:#9fb0cf;font-weight:600}
    <div class="fammark" id="fammark">
     <span class="c" data-n="Killian">K</span><span class="c" data-n="Amelie">A</span><span class="c" data-n="Tomás">T</span><span class="s" data-n="Adela">A</span>
    </div>
-   <div class="famname" id="famname">Toca las esquinas</div>
   </div>
   <div class="rev">
    <div class="kicker">Nuestra historia</div>
    <h2>La cuarta <em>esquina</em>.</h2>
-   <p class="txt">Un QR se lee por sus tres esquinas. En Kata le pusimos una cuarta: el sello coral del momento en que tu cliente vuelve. Las cuatro esquinas también son nosotros — <b style="color:var(--hueso)">K</b>illian, <b style="color:var(--hueso)">A</b>melie, <b style="color:var(--hueso)">T</b>omás y <b style="color:var(--hueso)">A</b>dela — la familia detrás del estudio.</p>
+   <p class="txt">Todo QR tiene tres esquinas que lo hacen leíble; los técnicos las llaman sus «ojos». A los negocios les faltaba una: la del cliente que regresa. Esa la dibujamos nosotros, con un sello coral. Y no es casualidad que sean cuatro: Kata también somos nosotros — <b style="color:var(--hueso)">K</b>illian, <b style="color:var(--hueso)">A</b>melie, <b style="color:var(--hueso)">T</b>omás y <b style="color:var(--hueso)">A</b>dela. No es un nombre inventado: es nuestra familia, puesta en cada tarjeta que entregamos.</p>
    <div class="mv">
     <div class="mvc"><div class="k">Misión</div><p>Que cualquier negocio de Panamá, del tamaño que sea, tenga herramientas digitales que se sientan de marca grande.</p></div>
-    <div class="mvc"><div class="k">Visión</div><p>Que volver a tu negocio favorito siempre tenga premio, y que eso se sienta tan panameño como el café de la esquina.</p></div>
+    <div class="mvc"><div class="k">Visión</div><p>Ver una esquina coral en cada mostrador de Panamá: del café de barrio al spa, negocios a los que da gusto volver.</p></div>
    </div>
   </div>
  </div>
@@ -441,6 +425,8 @@ $('#chips').addEventListener('click',e=>{
  $$('.pantalla').forEach(s=>s.classList.toggle('on',s.dataset.p===p));
  const t=textos[p];$('#dT').textContent=t.T;$('#dP').textContent=t.P;
  $('#dk1').textContent=t.k1;$('#dv1').textContent=t.v1;$('#dk2').textContent=t.k2;$('#dv2').textContent=t.v2;
+ const ex={sellos:['#FF6B57','https://tarjetas.holakata.com/','Conoce kata sellos →'],menu:['#F4B860','menu/','Conoce kata menú →'],invita:['#8E75F0','invita/','Conoce kata invita →'],presenta:['#3E8FD6','https://presenta.holakata.com/','Conoce kata presenta →']}[p];
+ $('#demotxt').style.setProperty('--pc',ex[0]);const g=$('#dGo');g.href=ex[1];g.textContent=ex[2];
 });
 
 /* demo sellos */
