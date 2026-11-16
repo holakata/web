@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menú Nácar Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Plan: columna de celular (máx. 480px) sobre fondo perla. Un solo mundo visual, tema claro por decisión.
+     Lo audaz está en un solo lugar: el título en Gilda Display y la barra de cita en cereza. */
+  :root {
+    --perla: #F1E8EF;
+    --papel: #FFFBFD;
+    --tinta: #2B1A2F;
+    --humo: #6F5E75;
+    --linea: #E3D5E0;
+    --cereza: #8C1B3F;
+    --lila: #CDB9DA;
+    --display: "Gilda Display", Georgia, "Times New Roman", serif;
+    --cuerpo: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+  body {
+    margin: 0;
+    background: var(--perla);
+    color: var(--tinta);
+    font-family: var(--cuerpo);
+    font-size: 16px;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
+  }
+  .menu {
+    max-width: 480px;
+    margin: 0 auto;
+    background: var(--papel);
+    min-height: 100vh;
+    padding-bottom: 120px;
+    box-shadow: 0 0 0 1px var(--linea);
+  }
+
+  /* Cabecera */
+  header { padding: 36px 20px 8px; }
+  .sello {
+    font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--humo);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .sello::before { content: ""; width: 28px; height: 1px; background: var(--cereza); }
+  h1 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(64px, 22vw, 96px);
+    line-height: .95;
+    letter-spacing: -.01em;
+    margin: 14px 0 6px;
+    text-wrap: balance;
+  }
+  h1 span { color: var(--cereza); }
+  .sub { margin: 0; color: var(--humo); max-width: 34ch; }
+
+  .colores { margin: 26px 0 0; padding: 0; list-style: none; display: flex; gap: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .colores li { display: grid; justify-items: center; gap: 6px; flex: 0 0 auto; width: 62px; text-align: center; font-size: 11px; line-height: 1.2; color: var(--humo); }
+  .gota {
+    width: 38px; height: 50px;
+    border-radius: 50% 50% 46% 46% / 62% 62% 38% 38%; /* forma de uña almendra */
+    background: var(--c);
+    position: relative;
+    box-shadow: inset 0 -6px 10px rgba(0,0,0,.14);
+  }
+  .gota::after {
+    content: ""; position: absolute; top: 7px; left: 9px; width: 8px; height: 20px;
+    border-radius: 50%; background: rgba(255,255,255,.55); transform: rotate(10deg);
+  }
+  .colores-t { margin: 26px 0 0; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--humo); }
+
+  /* Pestañas */
+  nav {
+    position: sticky; top: 0; z-index: 5;
+    background: color-mix(in srgb, var(--papel) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--linea);
+    margin-top: 22px;
+  }
+  nav ul { list-style: none; margin: 0; padding: 10px 20px; display: flex; gap: 8px; overflow-x: auto; }
+  nav a {
+    display: block; white-space: nowrap; text-decoration: none; color: var(--tinta);
+    padding: 8px 14px; border-radius: 999px; border: 1px solid var(--linea); font-size: 14px; font-weight: 500;
+  }
+  nav a[aria-current="true"] { background: var(--tinta); color: var(--papel); border-color: var(--tinta); }
+  nav a:focus-visible, .serv:focus-visible, .reservar:focus-visible { outline: 3px solid var(--lila); outline-offset: 2px; }
+
+  /* Secciones */
+  section { padding: 30px 20px 4px; }
+  h2 { font-family: var(--display); font-weight: 400; font-size: 32px; margin: 0; line-height: 1.1; }
+  .nota { margin: 6px 0 14px; color: var(--humo); font-size: 14px; max-width: 40ch; }
+
+  .serv {
+    width: 100%; text-align: left; cursor: pointer;
+    display: grid; grid-template-columns: 1fr auto 40px; gap: 4px 12px; align-items: start;
+    padding: 16px 0; background: none; border: 0; border-top: 1px solid var(--linea);
+    font: inherit; color: inherit;
+  }
+  .serv:first-of-type { border-top: 0; }
+  .serv .nom { font-weight: 600; font-size: 17px; line-height: 1.25; }
+  .serv .desc { grid-column: 1; color: var(--humo); font-size: 14px; max-width: 38ch; }
+  .serv .dur { grid-column: 1; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--humo); }
+  .serv .precio { grid-column: 2; grid-row: 1; font-variant-numeric: tabular-nums; font-weight: 600; font-size: 17px; white-space: nowrap; }
+  .serv .mas {
+    grid-column: 3; grid-row: 1 / span 3; align-self: center;
+    width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--tinta);
+    display: grid; place-items: center; font-size: 20px; line-height: 1; transition: background .15s, color .15s;
+  }
+  .serv[aria-pressed="true"] .mas { background: var(--cereza); border-color: var(--cereza); color: #fff; }
+  .serv[aria-pressed="true"] .nom { color: var(--cereza); }
+
+  /* Datos del local */
+  .info { margin: 34px 20px 0; padding: 18px; border: 1px solid var(--linea); border-radius: 14px; display: grid; gap: 10px; font-size: 14px; }
+  .info b { display: block; font-family: var(--display); font-weight: 400; font-size: 20px; margin-bottom: 2px; }
+  .info p { margin: 0; color: var(--humo); }
+  .pie { margin: 26px 20px 0; font-size: 12px; color: var(--humo); text-align: center; }
+
+  /* Barra de cita */
+  .barra {
+    position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);
+    width: min(100%, 480px); z-index: 10;
+    background: var(--cereza); color: #fff;
+    padding: 14px 20px 16px;
+    display: grid; grid-template-columns: 1fr auto; gap: 10px 14px; align-items: center;
+  }
+  .barra .res { font-size: 14px; line-height: 1.3; }
+  .barra .res strong { display: block; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .reservar {
+    background: #fff; color: var(--cereza); font-weight: 600; text-decoration: none;
+    padding: 12px 18px; border-radius: 999px; font-size: 15px; white-space: nowrap;
+  }
+  .reservar[aria-disabled="true"] { opacity: .45; pointer-events: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .serv .mas { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main class="menu">
+  <header>
+    <div class="sello">Uñas y pestañas · Ciudad de Panamá</div>
+    <h1>Nácar<span>.</span></h1>
+    <p class="sub">Toca los servicios que quieres y arma tu cita. El mensaje sale listo por WhatsApp.</p>
+    <p class="colores-t">Colores de la semana</p>
+    <ul class="colores" id="colores" aria-label="Colores de la semana"></ul>
+  </header>
+
+  <nav aria-label="Categorías"><ul id="chips"></ul></nav>
+
+  <div id="secciones"></div>
+
+  <div class="info">
+    <div><b>Horario</b><p>Lunes a sábado, 9:00 a. m. a 6:00 p. m. Solo con cita.</p></div>
+    <div><b>Para confirmar</b><p>Anticipo de B/. 5 por Yappy. Se descuenta del total. Pasados 15 minutos de retraso, la cita se reprograma.</p></div>
+    <div><b>WhatsApp</b><p>Arma tu cita y envíala con el botón de abajo. En esta demo el mensaje llega a Kata.</p></div>
+  </div>
+  <p class="pie">Menú de ejemplo hecho por Kata. Nácar es un negocio ficticio. <a href="../../" style="color:inherit">Volver a Kata Studio</a></p>
+</main>
+
+<div class="barra" id="barra">
+  <div class="res" id="resumen"><strong>Tu cita</strong>Toca un servicio para empezar</div>
+  <a class="reservar" id="reservar" href="#" aria-disabled="true">Enviar por WhatsApp</a>
+</div>
+
+<script>
+  // Datos del negocio. En un cliente real, solo esto cambia.
+  var NEGOCIO = { nombre: "Nácar", whatsapp: "50767929782", moneda: "B/." };
+
+  var COLORES = [
+    { n: "Cereza negra", c: "#4A0F24" },
+    { n: "Nácar", c: "#EBD3E0" },
+    { n: "Lila humo", c: "#9B86B0" },
+    { n: "Terracota", c: "#B5573F" },
+    { n: "Rosa té", c: "#D9A3A8" }
+  ];
+
+  var MENU = [
+    { id: "unas", titulo: "Uñas", nota: "Todas incluyen cuidado de cutícula y masaje de manos.", items: [
+      { n: "Manicure tradicional", d: "Limado, cutículas, hidratación y esmalte normal.", min: 40, p: 8 },
+      { n: "Semipermanente", d: "Esmalte que dura de 2 a 3 semanas sin levantarse.", min: 50, p: 15 },
+      { n: "Soft gel", d: "Extensión de gel sobre tu uña natural. Largo suave.", min: 90, p: 28 },
+      { n: "Acrílicas, set completo", d: "Forma almendra, cuadrada o coffin.", min: 120, p: 35 },
+      { n: "Relleno de acrílicas", d: "Para sets de hasta 3 semanas.", min: 90, p: 25 },
+      { n: "Retiro de gel o acrílico", d: "Se retira sin dañar tu uña.", min: 30, p: 6 }
+    ]},
+    { id: "pestanas", titulo: "Pestañas", nota: "Curvatura C o D, largos de 8 a 13 mm. Te recomendamos según tu ojo.", items: [
+      { n: "Clásicas 1 a 1", d: "Una extensión por cada pestaña natural. Look definido.", min: 120, p: 35 },
+      { n: "Híbridas", d: "Mezcla de clásicas y volumen. Más cuerpo, sin pesar.", min: 135, p: 42 },
+      { n: "Volumen ruso", d: "Abanicos de 3 a 5 puntas. La mirada más densa.", min: 150, p: 50 },
+      { n: "Relleno de pestañas", d: "Hasta 15 días después de tu último set.", min: 75, p: 22 },
+      { n: "Lifting y tinte", d: "Rizas y oscureces tus pestañas naturales. Dura de 6 a 8 semanas.", min: 60, p: 30 },
+      { n: "Retiro de extensiones", d: "Suave y sin tirar.", min: 30, p: 8 }
+    ]},
+    { id: "pies", titulo: "Pies", nota: "", items: [
+      { n: "Pedicure tradicional", d: "Limado, cutículas, hidratación y esmalte normal.", min: 50, p: 12 },
+      { n: "Pedicure semipermanente", d: "Con esmalte de larga duración.", min: 60, p: 20 },
+      { n: "Pedicure spa", d: "Exfoliación, mascarilla y 10 minutos de masaje.", min: 75, p: 25 }
+    ]},
+    { id: "combos", titulo: "Combos", nota: "Pagas menos que por separado.", items: [
+      { n: "Mani + pedi semipermanente", d: "Ahorras B/. 3.", min: 105, p: 32 },
+      { n: "Acrílicas + pestañas clásicas", d: "Ahorras B/. 5. Reserva la tarde completa.", min: 240, p: 65 }
+    ]},
+    { id: "detalles", titulo: "Detalles", nota: "Se agregan a cualquier servicio de uñas.", items: [
+      { n: "Francés", d: "Punta clásica, blanca o de color.", min: 10, p: 3 },
+      { n: "Cromado espejo", d: "Efecto metálico sobre gel o semipermanente.", min: 10, p: 4 },
+      { n: "Diseño a mano, por uña", d: "Flores, líneas, mármol. Tú traes la idea.", min: 10, p: 2 },
+      { n: "Piedras o charms, set", d: "Hasta 10 piezas.", min: 10, p: 5 }
+    ]}
+  ];
+
+  var elegidos = {};
+
+  function dinero(n) { return NEGOCIO.moneda + " " + n; }
+  function tiempo(m) {
+    var h = Math.floor(m / 60), r = m % 60;
+    if (!h) return r + " min";
+    return h + " h" + (r ? " " + r + " min" : "");
+  }
+
+  // Colores
+  document.getElementById("colores").innerHTML = COLORES.map(function (c) {
+    return '<li><span class="gota" style="--c:' + c.c + '"></span>' + c.n + '</li>';
+  }).join("");
+
+  // Pestañas y secciones
+  document.getElementById("chips").innerHTML = MENU.map(function (s) {
+    return '<li><a href="#' + s.id + '" data-id="' + s.id + '">' + s.titulo + '</a></li>';
+  }).join("");
+
+  document.getElementById("secciones").innerHTML = MENU.map(function (s) {
+    var filas = s.items.map(function (it, i) {
+      var key = s.id + "-" + i;
+      return '<button type="button" class="serv" data-k="' + key + '" aria-pressed="false">' +
+        '<span class="nom">' + it.n + '</span>' +
+        '<span class="precio">' + dinero(it.p) + '</span>' +
+        '<span class="mas" aria-hidden="true">+</span>' +
+        '<span class="desc">' + it.d + '</span>' +
+        '<span class="dur">' + tiempo(it.min) + '</span>' +
+        '</button>';
+    }).join("");
+    return '<section id="' + s.id + '"><h2>' + s.titulo + '</h2>' +
+      (s.nota ? '<p class="nota">' + s.nota + '</p>' : '<div style="height:10px"></div>') + filas + '</section>';
+  }).join("");
+
+  function buscar(key) {
+    var p = key.split("-");
+    var sec = MENU.filter(function (s) { return s.id === p[0]; })[0];
+    return sec.items[+p[1]];
+  }
+
+  function actualizar() {
+    var keys = Object.keys(elegidos);
+    var total = 0, mins = 0, lineas = [];
+    keys.forEach(function (k) {
+      var it = buscar(k); total += it.p; mins += it.min; lineas.push("- " + it.n + " (" + dinero(it.p) + ")");
+    });
+    var res = document.getElementById("resumen");
+    var btn = document.getElementById("reservar");
+    if (!keys.length) {
+      res.innerHTML = "<strong>Tu cita</strong>Toca un servicio para empezar";
+      btn.setAttribute("aria-disabled", "true");
+      btn.setAttribute("href", "#");
+      return;
+    }
+    res.innerHTML = "<strong>" + dinero(total) + "</strong>" + keys.length + (keys.length === 1 ? " servicio" : " servicios") + " · " + tiempo(mins);
+    var msg = "Hola Kata, probé el menú de ejemplo de " + NEGOCIO.nombre + " y quiero uno para mi negocio. Mi cita de prueba:\n" + lineas.join("\n") +
+      "\nTotal: " + dinero(total) + " (" + tiempo(mins) + ")";
+    btn.setAttribute("href", "https://wa.me/" + NEGOCIO.whatsapp + "?text=" + encodeURIComponent(msg));
+    btn.removeAttribute("aria-disabled");
+  }
+
+  document.getElementById("secciones").addEventListener("click", function (e) {
+    var b = e.target.closest(".serv");
+    if (!b) return;
+    var k = b.getAttribute("data-k");
+    if (elegidos[k]) { delete elegidos[k]; b.setAttribute("aria-pressed", "false"); b.querySelector(".mas").textContent = "+"; }
+    else { elegidos[k] = true; b.setAttribute("aria-pressed", "true"); b.querySelector(".mas").textContent = "✓"; }
+    actualizar();
+  });
+
+  // Pestaña activa según el scroll
+  var chips = document.querySelectorAll("#chips a");
+  function marcar(id) {
+    chips.forEach(function (a) { a.setAttribute("aria-current", a.getAttribute("data-id") === id ? "true" : "false"); });
+  }
+  marcar(MENU[0].id);
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (ents) {
+      ents.forEach(function (en) { if (en.isIntersecting) marcar(en.target.id); });
+    }, { rootMargin: "-25% 0px -65% 0px" });
+    document.querySelectorAll("section").forEach(function (s) { io.observe(s); });
+  }
+  actualizar();
+</script>
+</body>
+</html>

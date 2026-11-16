@@ -7,7 +7,7 @@
 <meta name="description" content="Tarjetas de sellos, menús, invitaciones y tarjetas de presentación digitales con QR para negocios de Panamá.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D1B36'/%3E%3Crect x='12' y='12' width='14' height='14' rx='4' fill='none' stroke='%23F7F5F2' stroke-width='5'/%3E%3Crect x='38' y='12' width='14' height='14' rx='4' fill='none' stroke='%23F7F5F2' stroke-width='5'/%3E%3Crect x='12' y='38' width='14' height='14' rx='4' fill='none' stroke='%23F7F5F2' stroke-width='5'/%3E%3Ccircle cx='45' cy='45' r='9' fill='%23FF6B57'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Instrument+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&family=Gloock&family=Gilda+Display&display=swap" rel="stylesheet">
 <style>
 :root{
  --noche:#0D1B36;--noche2:#132547;--coral:#FF6B57;--coral2:#d94a38;--hueso:#F7F5F2;
@@ -105,75 +105,11 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
  background:linear-gradient(160deg,#3a4a6e,#101d3a 45%);
  box-shadow:0 40px 80px rgba(0,0,0,.55),0 12px 28px rgba(0,0,0,.4),inset 0 1.5px 1.5px rgba(255,255,255,.3)}
 .phone .isla{position:absolute;left:50%;top:21px;transform:translateX(-50%);width:84px;height:22px;border-radius:999px;background:#060d1d;z-index:3}
-.scr{background:var(--hueso);border-radius:34px;min-height:560px;overflow:hidden;color:var(--noche);position:relative}
+.scr{background:var(--hueso);border-radius:34px;height:580px;overflow:hidden;color:var(--noche);position:relative}
 .st{display:flex;justify-content:space-between;font-size:11px;font-weight:700;padding:13px 22px 0;color:#5a647a}
 .pantalla{display:none;animation:fadep .4s}
 .pantalla.on{display:block}
 @keyframes fadep{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
-/* sellos */
-.chead{margin:14px 14px 0;border-radius:18px;padding:15px 16px;background:linear-gradient(145deg,#0D1B36,#1d3159);color:#fff;box-shadow:0 10px 22px rgba(13,27,54,.3)}
-.chead .n{font-family:var(--tit);font-weight:800;font-size:17px}
-.chead .t{font-size:9.5px;letter-spacing:2px;text-transform:uppercase;opacity:.75;margin-top:3px}
-.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;padding:18px 18px 6px}
-.sello{aspect-ratio:1;border-radius:50%;border:2.5px dashed #cabfae;display:grid;place-items:center;position:relative}
-.sello.on{background:var(--coral);border:none;box-shadow:0 5px 12px rgba(255,107,87,.35),inset 0 -4px 7px rgba(0,0,0,.15)}
-.sello.pop{animation:popin .5s cubic-bezier(.3,1.7,.4,1)}
-@keyframes popin{0%{transform:scale(0)}70%{transform:scale(1.18)}100%{transform:scale(1)}}
-.sello svg{width:40%;height:40%}
-.qrbtn{margin:14px 18px 0;display:flex;gap:12px;align-items:center;background:#fff;border:1.5px solid #e8e1d5;border-radius:18px;padding:13px 14px;cursor:pointer;box-shadow:0 8px 18px rgba(13,27,54,.08);transition:.2s}
-.qrbtn:active{transform:scale(.97)}
-.qrico{width:46px;height:46px;border-radius:12px;background:var(--noche);position:relative;flex:none}
-.qrico i{position:absolute;width:11px;height:11px;border:2.6px solid #fff;border-radius:3px}
-.qrico i:nth-child(1){top:6px;left:6px}.qrico i:nth-child(2){top:6px;right:6px}.qrico i:nth-child(3){bottom:6px;left:6px}
-.qrico b{position:absolute;right:7px;bottom:7px;width:9px;height:9px;background:var(--coral);border-radius:50%}
-.qrbtn .x{font-size:12.5px;line-height:1.4;color:#5c6578}.qrbtn .x b{color:var(--noche);font-family:var(--tit)}
-.toast{margin:12px 18px 0;background:var(--noche);color:#fff;border-radius:15px;padding:12px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 14px 28px rgba(13,27,54,.35);opacity:0;transform:translateY(8px);transition:.35s}
-.toast.on{opacity:1;transform:none}
-.toast b{width:28px;height:28px;border-radius:50%;background:var(--coral);display:grid;place-items:center;flex:none;font-size:12px;font-weight:800}
-.toast .tt{font-size:12.5px;font-weight:700;font-family:var(--tit)}.toast .ts{font-size:11px;color:#9fb0cf}
-.pie-demo{padding:14px 18px;font-size:12px;color:#8a92a6}.pie-demo b{color:var(--noche)}
-/* menu */
-.mhead{margin:14px 14px 0;border-radius:18px;padding:15px 16px;background:linear-gradient(145deg,#8a5a2b,#c98f46);color:#fff}
-.mtabs{display:flex;gap:7px;padding:14px 18px 2px}
-.mtab{font-size:12px;font-weight:700;font-family:var(--tit);padding:8px 13px;border-radius:999px;background:#efe9df;color:#6d6455;cursor:pointer;transition:.2s}
-.mtab.on{background:var(--oro);color:#4a3312;box-shadow:0 5px 12px rgba(244,184,96,.4)}
-.plato{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:12px 18px;border-bottom:1px dashed #e4dccd}
-.plato .pn{font-weight:700;font-size:13.5px}.plato .pd{font-size:11px;color:#8a92a6;margin-top:2px}
-.plato .pr{font-family:var(--tit);font-weight:800;font-size:14px;color:#a8742a;white-space:nowrap}
-.editado{margin:12px 18px;display:inline-block;background:#fff4e3;color:#a8742a;font-size:10.5px;font-weight:700;border-radius:999px;padding:5px 11px}
-/* invita */
-.invscene{min-height:470px;display:grid;place-items:center;background:
- radial-gradient(240px 200px at 70% 20%,#efe6ff,transparent 65%),
- radial-gradient(260px 220px at 20% 85%,#e4dbff,transparent 65%),#f4f1fb;position:relative;cursor:pointer}
-.sobrewrap{position:relative;width:200px}
-.tarjinv{position:absolute;left:4px;right:4px;bottom:26px;background:#fff;border-radius:14px;padding:18px 12px;text-align:center;box-shadow:0 14px 30px rgba(80,60,160,.25);transform:translateY(0);transition:transform .8s cubic-bezier(.2,.8,.2,1),z-index 0s .35s;z-index:1}
-.inv-open .tarjinv{transform:translateY(-140px);z-index:5}
-.tarjinv .f{font-size:9px;letter-spacing:2.5px;color:var(--lila);font-weight:700;text-transform:uppercase}
-.tarjinv .nom{font-family:Georgia,serif;font-size:21px;margin-top:6px;color:#2d2350}
-.tarjinv .dt{font-size:10px;color:#8a82a6;margin-top:6px;line-height:1.6;white-space:nowrap}
-.sobrebase{position:relative;width:200px;height:130px;background:linear-gradient(160deg,#9f89f3,#7a5fe0);border-radius:12px;z-index:2;box-shadow:0 18px 38px rgba(110,80,220,.4)}
-.sobrebase:after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(to bottom right,transparent 49%,rgba(255,255,255,.14) 50%),linear-gradient(to bottom left,transparent 49%,rgba(0,0,0,.08) 50%)}
-.solapa{position:absolute;left:0;right:0;top:0;height:64px;background:linear-gradient(170deg,#b5a3f7,#8e75f0);border-radius:12px 12px 4px 4px;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .6s cubic-bezier(.4,0,.2,1);z-index:3}
-.inv-open .solapa{transform:rotateX(180deg)}
-.selloinv{position:absolute;left:50%;top:40px;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--coral);z-index:4;box-shadow:0 6px 14px rgba(0,0,0,.25);display:grid;place-items:center;transition:opacity .3s}
-.selloinv:after{content:"";position:absolute;inset:7px;border:2px dashed rgba(255,255,255,.8);border-radius:50%}
-.inv-open .selloinv{opacity:0}
-.invhint{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;color:#8a75d8}
-.rsvp{position:absolute;bottom:52px;left:0;right:0;display:flex;gap:8px;justify-content:center;opacity:0;transition:.4s .5s}
-.inv-open .rsvp{opacity:1}
-.rsvp span{font-size:11.5px;font-weight:700;font-family:var(--tit);padding:9px 15px;border-radius:999px;background:#fff;color:#6a50cf;box-shadow:0 6px 14px rgba(110,80,220,.25)}
-.rsvp span.si{background:var(--lila);color:#fff}
-/* presenta */
-.presc{min-height:470px;background:radial-gradient(260px 200px at 80% 10%,#17305c,transparent 60%),#0d1526;color:#fff;padding:26px 20px;text-align:center}
-.pfoto{width:86px;height:86px;border-radius:50%;margin:16px auto 0;background:linear-gradient(145deg,#3E8FD6,#1d5a96);display:grid;place-items:center;font-family:var(--tit);font-weight:800;font-size:26px;box-shadow:0 12px 26px rgba(62,143,214,.4),inset 0 -5px 10px rgba(0,0,0,.25)}
-.presc h4{font-family:var(--tit);font-weight:800;font-size:20px;margin-top:14px}
-.presc .rol{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#7fb3e3;font-weight:700;margin-top:5px}
-.presbtns{display:grid;gap:9px;margin-top:22px}
-.presbtns span{display:flex;align-items:center;gap:11px;background:#152647;border:1px solid #23406e;border-radius:14px;padding:13px 15px;font-size:13px;font-weight:600;text-align:left;cursor:pointer;transition:.2s}
-.presbtns span:active{transform:scale(.97)}
-.presbtns b{width:30px;height:30px;border-radius:9px;flex:none;display:grid;place-items:center;font-size:13px;font-weight:800}
-.guardado{margin-top:14px;font-size:11.5px;color:#7fb3e3;opacity:0;transition:.3s}
-.guardado.on{opacity:1}
 
 /* ---------- productos ---------- */
 .prods{padding:76px 0 10px}
@@ -244,19 +180,174 @@ footer a{color:#9fb0cf;font-weight:600}
 /* tipografía: subtítulos y títulos a la izquierda, descripciones justificadas */
 .hsub,#dP,.mvc p,.historia .txt,.caso p{text-align:justify}
 
-/* mini diseños representativos de cada cliente */
-.mockj{margin-top:16px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 22px rgba(13,27,54,.14);max-width:300px}
-.mockj .mjh{background:linear-gradient(145deg,#B8895A,#8a6238);color:#fff;padding:12px 14px}
-.mockj .mjh b{font-family:var(--tit);font-size:14.5px;display:block}
-.mockj .mjh span{font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;opacity:.85}
-.mockj .mjs{display:flex;gap:9px;padding:13px 14px}
-.mockj .mjs i{width:26px;height:26px;border-radius:50%;border:2px dashed #cabfae}
-.mockj .mjs i.on{background:#B8895A;border:none;box-shadow:inset 0 -3px 5px rgba(0,0,0,.18)}
-.mockb{margin-top:16px;background:#0f0d0b;border:1px solid #3a2f1f;border-radius:16px;padding:14px;display:flex;gap:12px;align-items:center;max-width:300px;box-shadow:0 10px 22px rgba(0,0,0,.3)}
-.mockb .bbi{width:40px;height:40px;border-radius:50%;flex:none;background:linear-gradient(145deg,#c9a86a,#8a6b33);display:grid;place-items:center;font-family:var(--tit);font-weight:800;font-size:14px;color:#201709}
-.mockb b{font-family:var(--tit);font-size:14.5px;color:#f4ead8;display:block}
-.mockb span{font-size:9.5px;letter-spacing:1.6px;text-transform:uppercase;color:#c9a86a}
 .clogo.oscuro{background:#17130c}
+
+/* ---------- ejemplos reales dentro del celular ---------- */
+.scr{height:580px;min-height:0}
+.pantalla.on{display:block;height:100%}
+.mscr{zoom:1.2;height:483px;overflow-y:auto;overflow-x:hidden;position:relative;scrollbar-width:none;overscroll-behavior:contain;isolation:isolate;color:#fff}
+.mscr::-webkit-scrollbar{display:none}
+.vars{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.vars:empty{display:none}
+.vbtn{font-family:var(--tit);font-weight:700;font-size:12.5px;color:#b9c5de;background:transparent;border:1px solid var(--borde);padding:9px 14px;border-radius:999px;cursor:pointer;transition:.2s}
+.vbtn.on{background:var(--pc);border-color:var(--pc);color:var(--ct,#fff)}
+.dact{display:inline-block;margin:18px 0 0 12px;font-family:var(--tit);font-weight:700;font-size:14px;color:#cfd9ec;background:transparent;border:1.5px solid #3a5285;padding:12px 20px;border-radius:999px;cursor:pointer;transition:.25s;vertical-align:top}
+.dact:hover{border-color:var(--pc);color:#fff}
+.dact[hidden]{display:none}
+@media(max-width:520px){.dact{margin-left:0}}
+
+/* Jazmin Center · tarjeta de sellos */
+.jz{background:#F6F4F0;color:#0e2334;font-family:"Instrument Sans",system-ui,sans-serif;padding-bottom:16px}
+.jz .cab{background:linear-gradient(180deg,#075b75 0%,#0f80a1 100%);padding:36px 14px 72px;display:flex;gap:8px;align-items:center;color:#fff}
+.jz .jlogo{width:32px;height:32px;border-radius:9px;background:#fff;display:grid;place-items:center;flex:none;padding:3px}
+.jz .jlogo img{width:100%;height:100%;object-fit:contain;display:block}
+.jz .nom{font-family:"Gloock",serif;font-size:16px;line-height:1}
+.jz .lema{font-size:9px;opacity:.92;margin-top:3px}
+.jz .tarj{margin:-56px 12px 0;position:relative;border-radius:16px;padding:12px;color:#fff;background:radial-gradient(90% 90% at 88% 100%,#1aa0c2 0%,transparent 60%),linear-gradient(145deg,#3093b2,#097494);box-shadow:0 10px 22px -8px rgba(6,65,92,.55)}
+.jz .f1{display:flex;justify-content:space-between;align-items:flex-start}
+.jz .f1 small{font-size:9px;opacity:.85;display:block}
+.jz .f1 b{font-size:13px}
+.jz .cuenta{font-family:"Gloock",serif;font-size:22px;line-height:1}
+.jz .cuenta small{display:inline;font-family:"Instrument Sans",sans-serif;font-size:10px;opacity:.85}
+.jz .sellos{display:grid;grid-template-columns:repeat(5,1fr);gap:8px 6px;margin:12px 0 10px}
+.jz .s{aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:700;border:1px dashed rgba(255,255,255,.5)}
+.jz .s.ok{background:#fff;border:0}
+.jz .s.esp{border:1px solid rgba(255,255,255,.85)}
+.jz .premio{font-size:9.5px;opacity:.95}
+.jz h4{font-family:"Gloock",serif;font-weight:400;font-size:19px;line-height:1.1;margin:18px 14px 4px;color:#0e2334}
+.jz .sub{margin:0 14px 10px;font-size:11px;color:#55606E}
+.jz .reg{background:#fff;border-radius:10px;padding:9px 11px;margin:0 14px 7px;font-size:11px;color:#0e2334;box-shadow:0 1px 2px rgba(23,32,43,.06)}
+.jz .reg b{color:#0d5a74}
+.jz .bp{margin:12px 14px 0;background:#0d5a74;color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px}
+.jz .bs{margin:8px 14px 0;background:#fff;color:#0d5a74;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px;border:1px solid #E3DED6}
+
+/* Jazmin Center · tarjeta de regalo (sobre con lazo) */
+.gf{--marca:#1784a5;--marca-2:#0b5a74;--marca-claro:#3a9bb8;background:#F6F4F0;color:#0e2334;font-family:"Instrument Sans",system-ui,sans-serif}
+.gf:has(.escena:not(.fuera)){overflow:hidden}
+.gf .escena{position:absolute;inset:0;z-index:3;background:radial-gradient(120% 80% at 50% 0%,#DDEFF5 0%,#F6F4F0 65%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px;transition:opacity .6s ease}
+.gf .escena.fuera{opacity:0;pointer-events:none}
+.gf .de{text-align:center;margin-bottom:78px;transition:opacity .5s,transform .5s}
+.gf .de p{color:#55606E;font-size:12px;margin:0}
+.gf .de h6{font-family:"Gloock",serif;font-weight:400;font-size:24px;line-height:1.1;margin:4px 0 0;color:#0e2334}
+.gf .sobre{position:relative;width:200px;aspect-ratio:1.45;cursor:pointer;perspective:800px;animation:gflota 3.6s ease-in-out infinite;border:0;background:none;padding:0}
+@keyframes gflota{0%,100%{transform:translateY(0) rotate(-1.2deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+.gf .s-fondo,.gf .s-frente,.gf .s-solapa{position:absolute;left:0;right:0;transition:opacity .5s ease,transform .5s ease}
+.gf .s-fondo{inset:0;border-radius:10px;background:#DCD2C2;z-index:1}
+.gf .s-frente{bottom:0;height:100%;border-radius:10px;z-index:3;background:linear-gradient(170deg,#FBF8F3 0%,#EEE6D9 100%);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);box-shadow:0 22px 36px rgba(10,20,40,.25)}
+.gf .s-sombra{position:absolute;left:6%;right:6%;bottom:-20px;height:16px;border-radius:50%;background:rgba(10,20,40,.18);filter:blur(8px);z-index:0;transition:opacity .5s}
+.gf .s-solapa{top:0;height:64%;z-index:4;transform-origin:top center;background:linear-gradient(180deg,#FFFDF9,#F1EADF);clip-path:polygon(0 0,100% 0,50% 100%);border-radius:10px 10px 0 0;transition:transform .7s cubic-bezier(.4,.1,.3,1),z-index 0s .35s,opacity .5s}
+.gf .carta{position:absolute;left:7%;right:7%;top:10%;z-index:2;aspect-ratio:1.58;border-radius:10px;color:#fff;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;text-align:left;background:radial-gradient(120% 140% at 100% 100%,rgba(255,255,255,.2) 0%,transparent 45%),linear-gradient(150deg,var(--marca) 0%,var(--marca-2) 100%);box-shadow:0 8px 18px rgba(10,20,40,.3);border:1px solid rgba(255,255,255,.25);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.gf .carta .neg{font-family:"Gloock",serif;font-size:12px}.gf .carta .que{font-size:8px;opacity:.8}.gf .carta .valor{font-family:"Gloock",serif;font-size:17px;line-height:1.05}.gf .carta .pd{font-size:8.5px}
+.gf .cinta-v,.gf .cinta-h{position:absolute;z-index:5;transition:transform .5s cubic-bezier(.5,0,.75,0),opacity .4s .2s}
+.gf .cinta-v{top:0;bottom:0;left:calc(50% - 10px);width:20px;transform-origin:top;background:linear-gradient(90deg,var(--marca-2),var(--marca-claro) 45%,var(--marca) 60%,var(--marca-2))}
+.gf .cinta-h{left:0;right:0;top:calc(56% - 9px);height:18px;transform-origin:right;background:linear-gradient(180deg,var(--marca-2),var(--marca-claro) 45%,var(--marca) 60%,var(--marca-2))}
+.gf .lazo{position:absolute;z-index:6;width:86px;left:calc(50% - 43px);top:calc(56% - 36px);filter:drop-shadow(0 5px 6px rgba(0,0,0,.25));transition:transform .5s cubic-bezier(.5,0,.75,0),opacity .4s .1s;animation:glate 2.4s ease-in-out infinite}
+@keyframes glate{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.gf .toca{margin:34px 0 0;color:#55606E;font-size:11.5px;display:flex;align-items:center;gap:7px;transition:opacity .3s}
+.gf .toca i{width:7px;height:7px;border-radius:50%;background:var(--marca);animation:glate 1.4s ease-in-out infinite}
+.gf .escena.desata .sobre{animation:none}
+.gf .escena.desata .lazo{animation:none;transform:scale(1.3) rotate(-18deg) translateY(-10px);opacity:0}
+.gf .escena.desata .cinta-v{transform:scaleY(0);opacity:0}
+.gf .escena.desata .cinta-h{transform:scaleX(0);opacity:0}
+.gf .escena.desata .toca{opacity:0}
+.gf .escena.abre .s-solapa{transform:rotateX(180deg);z-index:1}
+.gf .escena.sale .carta{transform:translateY(-82%)}
+.gf .escena.fin .s-fondo,.gf .escena.fin .s-frente,.gf .escena.fin .s-solapa{opacity:0;transform:translateY(50px)}
+.gf .escena.fin .s-sombra{opacity:0}
+.gf .escena.abre .de{opacity:0;transform:translateY(-10px)}
+.gf .escena.fin .carta{transform:translateY(-40%) scale(1.15);z-index:6}
+.gf .vista{padding:30px 14px 20px}
+.gf .intro{text-align:center;margin-bottom:14px}
+.gf .intro img{width:40px;height:40px;object-fit:contain;display:block;margin:0 auto 4px}
+.gf .intro p{color:#55606E;font-size:11.5px;margin:0}
+.gf .intro h6{font-family:"Gloock",serif;font-weight:400;font-size:20px;line-height:1.1;margin:3px 0 0;color:#0e2334}
+.gf .giftcard{aspect-ratio:1.58;border-radius:16px;color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 140% at 100% 100%,rgba(255,255,255,.18) 0%,transparent 45%),linear-gradient(150deg,var(--marca) 0%,var(--marca-2) 100%);box-shadow:0 2px 4px rgba(11,90,116,.12),0 16px 30px rgba(11,90,116,.28)}
+.gf .giftcard .neg{font-family:"Gloock",serif;font-size:15px}.gf .giftcard .que{font-size:9.5px;opacity:.8}
+.gf .giftcard .valor{font-family:"Gloock",serif;font-size:25px;line-height:1.05}.gf .giftcard .pd{display:flex;justify-content:space-between;font-size:10px}
+.gf .mensaje{background:#fff;border-radius:14px;padding:13px;margin-top:12px;box-shadow:0 1px 2px rgba(23,32,43,.06),0 6px 16px rgba(23,32,43,.07);font-family:"Gloock",serif;font-size:13.5px;line-height:1.35;color:#0e2334}
+.gf .mensaje span{display:block;font-family:"Instrument Sans",sans-serif;font-size:10.5px;color:#55606E;margin-top:7px}
+.gf .datos{background:#fff;border-radius:14px;padding:2px 13px;margin-top:10px;box-shadow:0 1px 2px rgba(23,32,43,.06),0 6px 16px rgba(23,32,43,.07)}
+.gf .datos div{display:flex;justify-content:space-between;padding:9px 0;border-top:1px solid #E3DED6;font-size:11px;gap:8px;color:#0e2334}
+.gf .datos div:first-child{border-top:0}.gf .datos span:first-child{color:#55606E}
+.gf .usar{margin-top:12px;background:#0d5a74;color:#fff;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:12px}
+
+/* BK Sax · tarjeta de presentación */
+.bk{--bg:#0d0b0b;--card:#171313;--line:#2c2424;--ink:#f4ede4;--mute:#b7aaa0;--wine:#8f2f35;--wine2:#b9474e;--gold:#c9a86a;background:var(--bg);color:var(--ink);font-family:"Montserrat",system-ui,sans-serif;padding-bottom:18px}
+.bk .bhero{position:relative;height:330px;overflow:hidden}
+.bk .bhero img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
+.bk .bhero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,11,11,0) 45%,rgba(13,11,11,.75) 78%,var(--bg))}
+.bk .bhero .t{position:absolute;z-index:2;left:0;right:0;bottom:10px;text-align:center;padding:0 10px}
+.bk .k{font-size:8px;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+.bk h4{font-family:"Playfair Display",serif;font-weight:600;font-size:27px;line-height:1.05;margin:6px 0 5px;color:var(--ink)}
+.bk .rol{font-size:9px;letter-spacing:1.5px;color:var(--mute);text-transform:uppercase}
+.bk .w{padding:0 10px}
+.bk .bcta{display:grid;gap:7px;margin-top:4px}
+.bk .btn{display:flex;align-items:center;gap:9px;padding:10px 11px;border-radius:12px;background:var(--card);border:1px solid var(--line)}
+.bk .btn .ic{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:#231b1b;flex:none}
+.bk .btn .ic svg{width:16px;height:16px}
+.bk .l1{font-weight:600;font-size:11.5px}
+.bk .l2{font-size:9.5px;color:var(--mute);margin-top:1px}
+.bk .arr{margin-left:auto;color:var(--mute);font-size:13px}
+.bk .main{background:linear-gradient(135deg,var(--wine),#5e1d22);border-color:transparent}
+.bk .main .ic{background:rgba(255,255,255,.14)}
+.bk .main .l2{color:#f1d9d4}
+.bk .promo{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;border:1px dashed rgba(201,168,106,.6);background:rgba(201,168,106,.07);font-size:10px;line-height:1.35;color:var(--mute)}
+.bk .promo b{color:var(--ink);font-weight:600}
+.bk .promo .pct{font-family:"Playfair Display",serif;font-size:26px;color:var(--gold);line-height:1}
+.bk .bsec{margin-top:24px}
+.bk .bsec h5{font-family:"Playfair Display",serif;font-weight:600;font-size:18px;margin:0 0 5px;line-height:1.15;color:var(--ink)}
+.bk .bsec h5 em{color:var(--gold);font-weight:500}
+.bk .lead2{color:var(--mute);font-size:10.5px;line-height:1.55;margin:0 0 11px}
+.bk .tabs{display:flex;gap:4px;background:var(--card);border:1px solid var(--line);padding:4px;border-radius:11px;margin-bottom:10px}
+.bk .tabs button{flex:1;border:0;background:none;color:var(--mute);font:600 10.5px "Montserrat",sans-serif;padding:8px 4px;border-radius:8px;cursor:pointer}
+.bk .tabs button.act{background:var(--wine);color:#fff}
+.bk .bpanel{display:none}.bk .bpanel.act{display:block}
+.bk .gr{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.bk .tile{background:var(--card);border:1px solid var(--line);border-radius:11px;padding:10px}
+.bk .tile b{display:block;font-size:11px;margin-bottom:2px}
+.bk .tile span{font-size:9.5px;color:var(--mute);line-height:1.35}
+.bk .bchips{display:flex;flex-wrap:wrap;gap:6px}
+.bk .bchip{padding:7px 11px;border-radius:999px;border:1px solid rgba(201,168,106,.55);background:var(--card);font-size:10.5px}
+.bk .foto2{margin:24px 0 0;border-radius:16px;overflow:hidden}
+.bk .foto2 img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;object-position:50% 30%}
+.bk .blogo{margin-top:28px;padding:0 30px}.bk .blogo img{width:100%;max-width:150px;display:block;margin:0 auto}
+.bk .foot{text-align:center;color:#8a7d76;font-size:9.5px;margin-top:18px}.bk .foot b{color:var(--gold);font-weight:600}
+
+/* Nácar · menú */
+.nx{background:#FFFBFD;color:#2B1A2F;font-family:var(--tx);padding-bottom:74px;min-height:100%}
+.nx .top{padding:34px 14px 6px}
+.nx .nsello{font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:#6F5E75;display:flex;gap:8px;align-items:center}
+.nx .nsello::before{content:"";width:18px;height:1px;background:#8C1B3F}
+.nx h4{font-family:"Gilda Display",serif;font-weight:400;font-size:52px;line-height:.95;margin:10px 0 4px;color:#2B1A2F}
+.nx h4 span{color:#8C1B3F}
+.nx .tp{margin:0;font-size:10.5px;color:#6F5E75}
+.nx .nchips{display:flex;gap:6px;padding:12px 14px;overflow-x:auto;scrollbar-width:none}
+.nx .nchips span{font-size:10.5px;border:1px solid #E3D5E0;border-radius:999px;padding:5px 10px;white-space:nowrap}
+.nx .nchips span:first-child{background:#2B1A2F;color:#fff;border-color:#2B1A2F}
+.nx h5{font-family:"Gilda Display",serif;font-weight:400;font-size:22px;margin:12px 14px 2px;color:#2B1A2F}
+.nx .nt{margin:0 14px 6px;font-size:10px;color:#6F5E75}
+.nx .it{display:grid;grid-template-columns:1fr auto 28px;gap:2px 8px;width:calc(100% - 28px);margin:0 14px;padding:10px 0;border:0;border-top:1px solid #E3D5E0;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.nx .it .a{font-weight:600;font-size:12.5px;line-height:1.25}
+.nx .it .b{grid-column:1;font-size:10px;color:#6F5E75}
+.nx .it .c{grid-column:2;grid-row:1;font-weight:600;font-size:12.5px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.nx .it .d{grid-column:3;grid-row:1/span 2;align-self:center;width:24px;height:24px;border-radius:50%;border:1.3px solid #2B1A2F;display:grid;place-items:center;font-size:14px;line-height:1}
+.nx .it[aria-pressed="true"] .d{background:#8C1B3F;border-color:#8C1B3F;color:#fff}
+.nx .it[aria-pressed="true"] .a{color:#8C1B3F}
+.nx .bar{position:sticky;bottom:0;margin-top:14px;background:#8C1B3F;color:#fff;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:10.5px;line-height:1.25}
+.nx .bar strong{display:block;font-size:14px;font-variant-numeric:tabular-nums}
+.nx .bar span.r{background:#fff;color:#8C1B3F;font-weight:600;padding:7px 11px;border-radius:999px;font-size:11px;white-space:nowrap}
+
+/* Invita · próximamente */
+.prox{height:100%;background:radial-gradient(240px 200px at 70% 20%,#efe6ff,transparent 65%),radial-gradient(260px 220px at 20% 85%,#e4dbff,transparent 65%),#f4f1fb;display:grid;place-items:center;text-align:center;padding:30px 26px;color:#2d2350}
+.prox .esq{display:grid;gap:10px;width:100%;margin-bottom:22px}
+.prox .esq i{display:block;height:14px;border-radius:7px;background:#ddd3fa}
+.prox .esq i:nth-child(1){height:130px;border-radius:16px;background:#d3c6f7}
+.prox .esq i:nth-child(2){width:70%;margin:0 auto;height:20px}
+.prox .esq i:nth-child(3){width:90%;margin:0 auto}
+.prox .esq i:nth-child(4){width:55%;margin:0 auto}
+.prox .pill{display:inline-block;background:var(--lila);color:#fff;font-family:var(--tit);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:9px 18px;border-radius:999px}
+.prox p{margin:12px 0 0;font-size:14px;line-height:1.5;color:#6a5fa0}
+@media (prefers-reduced-motion:reduce){.gf .sobre,.gf .lazo,.gf .toca i{animation:none}}
 </style>
 </head>
 <body>
@@ -300,73 +391,103 @@ footer a{color:#9fb0cf;font-weight:600}
   <h2>Un QR para cada cosa que tu negocio necesita.</h2>
  </div>
  <div class="chips rev" id="chips">
-  <button class="chip on" data-p="sellos" style="--pc:#FF6B57;--ct:#fff"><b></b>sellos</button>
+  <button class="chip on" data-p="tarjetas" style="--pc:#FF6B57;--ct:#fff"><b></b>tarjetas</button>
   <button class="chip" data-p="menu" style="--pc:#F4B860;--ct:#4a3312"><b></b>menú</button>
-  <button class="chip" data-p="invita" style="--pc:#8E75F0;--ct:#fff"><b></b>invita</button>
   <button class="chip" data-p="presenta" style="--pc:#3E8FD6;--ct:#fff"><b></b>presenta</button>
+  <button class="chip" data-p="invita" style="--pc:#8E75F0;--ct:#fff"><b></b>invita</button>
  </div>
  <div class="demobox">
   <div class="sticky rev">
    <div class="phone"><div class="isla"></div><div class="scr">
-    <div class="st"><span id="reloj">8:03</span><span>●●● ᯤ</span></div>
-
-    <div class="pantalla on" data-p="sellos">
-     <div class="chead"><div class="n">Café Cerezo</div><div class="t">Cliente frecuente · Vía Argentina</div></div>
-     <div class="grid8" id="grid8"></div>
-     <button class="qrbtn" id="scan">
-      <span class="qrico"><i></i><i></i><i></i><b></b></span>
-      <span class="x"><b>Escanear el QR del mostrador</b><br>así de fácil suma tu cliente</span>
-     </button>
-     <div class="toast" id="toast"><b>+1</b><div><div class="tt" id="toastT">¡Sello sumado!</div><div class="ts" id="toastS"></div></div></div>
-     <div class="pie-demo"><b>Rosa M.</b> · cliente desde agosto · premio: café gratis</div>
-    </div>
-
-    <div class="pantalla" data-p="menu">
-     <div class="mhead"><div class="n" style="font-family:var(--tit);font-weight:800;font-size:17px">Fonda La Abuela</div><div class="t" style="font-size:9.5px;letter-spacing:2px;text-transform:uppercase;opacity:.8;margin-top:3px">Menú del día · Juan Díaz</div></div>
-     <div class="mtabs" id="mtabs">
-      <span class="mtab on" data-m="d">Desayunos</span><span class="mtab" data-m="a">Almuerzos</span><span class="mtab" data-m="b">Bebidas</span>
+    <div class="pantalla on" data-p="sellos"><div class="mscr jz">
+     <div class="cab"><div class="jlogo"><img src="img/jazmin-loto.png" alt=""></div><div><div class="nom">Jazmin Center</div><div class="lema">Equilibrio, Salud y Bienestar</div></div></div>
+     <div class="tarj">
+      <div class="f1"><div><small>Tarjeta de cliente</small><b>Tu nombre</b></div><div class="cuenta"><span id="jz-n">2</span> <small>/ 10</small></div></div>
+      <div class="sellos" id="jz-sellos"></div>
+      <div class="premio">Masaje de 1 hora o Detox</div>
      </div>
-     <div id="platos"></div>
-     <span class="editado">● actualizado hoy a las 6:40 a. m.</span>
-    </div>
+     <h4>Tu tarjeta de cliente frecuente</h4>
+     <p class="sub">Cada compra suma un sello.</p>
+     <div class="reg"><b>Visita 10:</b> Masaje de 1 hora o Detox</div>
+     <div class="reg"><b>Visita 4:</b> 50 % de descuento</div>
+     <div class="reg"><b>Miércoles:</b> tu visita vale doble</div>
+     <div class="bp">Crear mi tarjeta</div>
+     <div class="bs">Ya tengo tarjeta</div>
+    </div></div>
 
-    <div class="pantalla" data-p="invita">
-     <div class="invscene" id="invscene">
-      <div class="sobrewrap">
-       <div class="tarjinv"><div class="f">Nos casamos</div><div class="nom">Marta &amp; Iván</div><div class="dt">Sábado 23 de mayo · 4:30 p. m.<br>Jardines del Casco, Panamá</div></div>
-       <div class="sobrebase"><div class="solapa"></div><div class="selloinv"></div></div>
+    <div class="pantalla" data-p="regalo"><div class="mscr gf" id="gf">
+     <div class="vista">
+      <div class="intro"><img src="img/jazmin-loto.png" alt=""><p>Carlos te regaló</p><h6>Una visita a Jazmin Center</h6></div>
+      <div class="giftcard"><div class="neg">Jazmin Center</div><div><div class="que">Tarjeta de regalo por</div><div class="valor">B/. 50.00</div></div><div class="pd"><span>Para: Ana</span><span>Hasta el 16 feb</span></div></div>
+      <div class="mensaje">“Feliz cumpleaños. Te mereces un día de descanso.”<span>Carlos</span></div>
+      <div class="datos"><div><span>Cómo usarla</span><span>Muéstrala en recepción</span></div><div><span>Para agendar</span><span style="color:#0b5a74;font-weight:600">WhatsApp</span></div></div>
+      <div class="usar">Usar en recepción</div>
+     </div>
+     <div class="escena" id="gf-escena">
+      <div class="de"><p>Carlos te envió un regalo</p><h6>Para Ana</h6></div>
+      <button type="button" class="sobre" id="gf-sobre" aria-label="Abrir el regalo">
+       <div class="s-sombra"></div><div class="s-fondo"></div>
+       <div class="carta"><div class="neg">Jazmin Center</div><div><div class="que">Tarjeta de regalo</div><div class="valor">B/. 50.00</div></div><div class="pd">Para: Ana</div></div>
+       <div class="s-frente"></div><div class="s-solapa"></div><div class="cinta-v"></div><div class="cinta-h"></div>
+       <div class="lazo"><svg viewBox="0 0 120 100" aria-hidden="true"><defs><linearGradient id="sat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a9bb8"/><stop offset=".55" stop-color="#1784a5"/><stop offset="1" stop-color="#0b5a74"/></linearGradient></defs><path d="M55 52 L36 96 L45 91 L50 99 L62 56Z" fill="url(#sat)"/><path d="M65 52 L84 96 L75 91 L70 99 L58 56Z" fill="url(#sat)"/><path d="M60 46 C44 18 10 14 12 38 C14 58 42 58 60 46Z" fill="url(#sat)"/><path d="M60 46 C76 18 110 14 108 38 C106 58 78 58 60 46Z" fill="url(#sat)"/><path d="M58 45 C44 30 24 28 22 38 C22 46 40 48 58 45Z" fill="#0b5a74" opacity=".35"/><path d="M62 45 C76 30 96 28 98 38 C98 46 80 48 62 45Z" fill="#0b5a74" opacity=".35"/><rect x="51" y="36" width="18" height="20" rx="6" fill="url(#sat)" stroke="#0b5a74" stroke-width="1"/></svg></div>
+      </button>
+      <p class="toca"><i></i>Toca el lazo para abrirlo</p>
+     </div>
+    </div></div>
+
+    <div class="pantalla" data-p="presenta"><div class="mscr bk">
+     <header class="bhero"><img src="img/bk-foto1.jpg" alt="Bavrak Bustamante"><div class="t"><div class="k">BK Sax</div><h4>Bavrak<br>Bustamante</h4><div class="rol">Saxofonista profesional</div></div></header>
+     <div class="w">
+      <div class="bcta">
+       <div class="btn main"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-3.9 3.1-7 7-7 1.4 0 2.6.4 3.7 1M18 15v6M15 18h6"/></svg></span><span><div class="l1">Guardar contacto</div><div class="l2">6419-1983 · directo a tu teléfono</div></span><span class="arr">›</span></div>
+       <div class="promo"><span class="pct">15%</span><span><b>de descuento</b><br>en eventos reservados hasta el 31 de diciembre</span></div>
+       <div class="btn"><span class="ic"><svg viewBox="0 0 24 24" fill="#c9a86a"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-2.2-1-3-2.7-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 5 4.3 1.9.7 2.6.8 3.5.7.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg></span><span><div class="l1">Consultar disponibilidad</div><div class="l2">Cotiza tu evento por WhatsApp</div></span><span class="arr">›</span></div>
+       <div class="btn"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c9a86a" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c9a86a"/></svg></span><span><div class="l1">Instagram</div><div class="l2">@bk.saxx</div></span><span class="arr">›</span></div>
       </div>
-      <div class="rsvp"><span class="si">Sí, voy ✓</span><span>No puedo</span></div>
-      <div class="invhint" id="invhint">Toca el sobre</div>
+      <section class="bsec">
+       <h5>Música en vivo <em>para tu evento</em></h5>
+       <p class="lead2">Saxofón en vivo para eventos sociales, corporativos, celebraciones especiales, lounge y restaurantes.</p>
+       <div class="tabs" role="tablist"><button type="button" class="act" data-p="bk1">Eventos</button><button type="button" data-p="bk2">Otros servicios</button></div>
+       <div class="bpanel act" id="bk1"><div class="gr">
+        <div class="tile"><b>Bodas</b><span>Ceremonia, cóctel y recepción</span></div>
+        <div class="tile"><b>Bautizos</b><span>Música para el momento especial</span></div>
+        <div class="tile"><b>Cumpleaños</b><span>Sorpresas y celebraciones</span></div>
+        <div class="tile"><b>Corporativos</b><span>Galas, lanzamientos y cenas</span></div>
+        <div class="tile"><b>Lounge</b><span>Ambiente elegante en vivo</span></div>
+        <div class="tile"><b>Restaurantes</b><span>Noches de música en vivo</span></div>
+       </div></div>
+       <div class="bpanel" id="bk2"><p class="lead2">Además del saxofón solista, agrupaciones para cada estilo:</p>
+        <div class="bchips"><span class="bchip">Murga</span><span class="bchip">Samba</span><span class="bchip">Salsa</span><span class="bchip">Merengue</span><span class="bchip">Jazz</span><span class="bchip">Música de cámara</span><span class="bchip">Música clásica</span></div></div>
+      </section>
+      <figure class="foto2"><img src="img/bk-foto2.jpg" alt="Bavrak Bustamante tocando el saxofón" loading="lazy"></figure>
+      <div class="blogo"><img src="img/bk-logo.png" alt="BK Sax · Bavrak Bustamante" loading="lazy"></div>
+      <div class="foot">Tarjeta digital por <b>@holakata.pa</b></div>
      </div>
-    </div>
+    </div></div>
 
-    <div class="pantalla" data-p="presenta">
-     <div class="presc">
-      <div class="kicker" style="color:#7fb3e3">kata presenta</div>
-      <div class="pfoto">AV</div>
-      <h4>Ana Lucía Vega</h4>
-      <div class="rol">Fotógrafa de bodas</div>
-      <div class="presbtns">
-       <span><b style="background:#1f8a4c22;color:#4cc078;border:1px solid #2a5c41">W</b>Escríbele por WhatsApp</span>
-       <span><b style="background:#8e75f022;color:#b4a3f5;border:1px solid #4a3d82">I</b>Mira su portafolio</span>
-       <span id="pguardar"><b style="background:#3e8fd622;color:#7fb3e3;border:1px solid #2a5280">+</b>Guardar contacto</span>
-      </div>
-      <div class="guardado" id="guardado">✓ Guardado en tus contactos (es una demo)</div>
-     </div>
-    </div>
+    <div class="pantalla" data-p="menu"><div class="mscr nx">
+     <div class="top"><div class="nsello">Uñas y pestañas · Ciudad de Panamá</div><h4>Nácar<span>.</span></h4><p class="tp">Toca los servicios y arma tu cita.</p></div>
+     <div class="nchips"><span>Uñas</span><span>Pestañas</span><span>Pies</span><span>Combos</span></div>
+     <div id="nx-lista"></div>
+     <div class="bar"><div id="nx-res"><strong>Tu cita</strong>Toca un servicio</div><span class="r">Reservar</span></div>
+    </div></div>
+
+    <div class="pantalla" data-p="invita"><div class="mscr prox">
+     <div><div class="esq" aria-hidden="true"><i></i><i></i><i></i><i></i></div><span class="pill">Próximamente</span><p>Estamos preparando el primer ejemplo de invitación.</p></div>
+    </div></div>
 
    </div></div>
   </div>
   <div class="rev">
    <div class="sechead" id="demotxt" style="max-width:380px">
-    <h2 id="dT" style="font-size:clamp(24px,6vw,32px)">El sello cae solo.</h2>
-    <p id="dP">El negocio pone una tablet con un QR que cambia cada 30 segundos. Tu cliente lo escanea con la cámara, el sello cae y el premio llega sin cartones perdidos. Pruébalo: toca «Escanear».</p>
+    <div class="vars" id="vars"><button type="button" class="vbtn on" data-v="sellos">Tarjeta de sellos</button><button type="button" class="vbtn" data-v="regalo">Tarjeta de regalo</button></div>
+    <h2 id="dT" style="font-size:clamp(24px,6vw,32px)">Cada visita suma un sello.</h2>
+    <p id="dP">Tu cliente escanea el QR del mostrador con la cámara del celular y su sello cae solo. Sin apps que descargar ni cartones que se pierden. Toca el botón y míralo en acción.</p>
     <div class="mv" style="margin-top:20px">
-     <div class="mvc"><div class="k" id="dk1">Para quién</div><p id="dv1">Personas con un negocio donde los clientes vuelven seguido y quieren premiar esa fidelidad.</p></div>
-     <div class="mvc"><div class="k" id="dk2">Qué incluye</div><p id="dv2">Tu tarjeta con tu marca, premios a tu medida, panel para tu equipo y mucho más.</p></div>
+     <div class="mvc"><div class="k" id="dk1">Para quién</div><p id="dv1">Spas, cafés, barberías, tiendas y cualquier negocio donde los clientes vuelven y vale la pena premiarlos.</p></div>
+     <div class="mvc"><div class="k" id="dk2">Qué incluye</div><p id="dv2">Tu tarjeta con tu marca, premios a tu medida y un panel para que tu equipo sume y canjee en segundos.</p></div>
     </div>
-    <a class="dgo" id="dGo" href="https://tarjetas.holakata.com/">Conoce kata sellos →</a>
+    <a class="dgo" id="dGo" href="https://tarjetas.holakata.com/t/?n=jazmin">Ver la tarjeta completa →</a><button type="button" class="dact" id="dAct">Probar: sumar un sello</button>
    </div>
   </div>
  </div>
@@ -379,16 +500,12 @@ footer a{color:#9fb0cf;font-weight:600}
  </div>
  <div class="cgrid">
   <div class="caso rev">
-   <div class="chead2"><img class="clogo" src="img/jazmin.png" alt="Jazmin Center"><div><div class="tag">kata sellos · spa</div><h3>Jazmin Center</h3></div></div>
-   <p>Tarjeta de cliente frecuente, club de miembros y tarjetas de regalo para un spa en Panamá, con panel propio para su recepción.</p>
-   <div class="mockj"><div class="mjh"><b>Jazmin Center</b><span>Equilibrio, salud y bienestar</span></div><div class="mjs"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
-   <a class="go" href="https://www.instagram.com/jazminholisticcenter/">@jazminholisticcenter</a>
+   <div class="chead2"><img class="clogo" src="img/jazmin.png" alt="Jazmin Center"><div><div class="tag">kata tarjetas · spa</div><h3>Jazmin Center</h3></div></div>
+   <a class="go" href="https://www.instagram.com/jazminholisticcenter/" target="_blank" rel="noopener">@jazminholisticcenter</a>
   </div>
   <div class="caso sax rev">
    <div class="chead2"><img class="clogo oscuro" src="img/bk.png" alt="BK Sax"><div><div class="tag">kata presenta · música</div><h3>BK Sax</h3></div></div>
-   <p>Tarjeta de presentación digital para un saxofonista de eventos: su música y su contacto en un solo QR que muestra desde el celular.</p>
-   <div class="mockb"><div class="bbi">BK</div><div><b>BK Sax</b><span>Saxofonista · eventos</span></div></div>
-   <a class="go" href="https://www.instagram.com/bk.saxx/">@bk.saxx</a>
+   <a class="go" href="https://www.instagram.com/bk.saxx/" target="_blank" rel="noopener">@bk.saxx</a>
   </div>
  </div>
 </div></section>
@@ -432,72 +549,120 @@ const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 $('#burger').addEventListener('click',()=>{$('#movil').classList.toggle('on');$('#burger').classList.toggle('x')});
 $('#movil').addEventListener('click',()=>{$('#movil').classList.remove('on');$('#burger').classList.remove('x')});
 
-/* reloj real */
-(function(){const d=new Date();let h=d.getHours()%12||12;$('#reloj').textContent=h+':'+String(d.getMinutes()).padStart(2,'0')})();
-
 /* reveals */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 $$('.rev').forEach(el=>io.observe(el));
 
-/* demo: cambio de producto */
-const textos={
- sellos:{T:'El sello cae solo.',P:'El negocio pone una tablet con un QR que cambia cada 30 segundos. Tu cliente lo escanea con la cámara, el sello cae y el premio llega sin cartones perdidos. Pruébalo: toca «Escanear».',k1:'Para quién',v1:'Personas con un negocio donde los clientes vuelven seguido y quieren premiar esa fidelidad.',k2:'Qué incluye',v2:'Tu tarjeta con tu marca, premios a tu medida, panel para tu equipo y mucho más.'},
- menu:{T:'Tu carta, siempre al día.',P:'Se acabó reimprimir menús. Cambias un precio o escondes un plato agotado desde tu celular y queda cambiado en todas las mesas al instante. Prueba las pestañas.',k1:'Para quién',v1:'Personas que cambian precios o platos seguido y no quieren volver a reimprimir una carta.',k2:'Qué incluye',v2:'Tu carta con tu identidad, fotos de tus platos y cambios al instante, sin límite.'},
- invita:{T:'Un sobre que se abre solo.',P:'Tus invitados reciben un enlace por WhatsApp: el sobre se abre, suena la música y confirman asistencia con un toque. Tú ves la lista en tiempo real. Toca el sobre.',k1:'Para quién',v1:'Personas que celebran algo grande y quieren que la invitación esté a la altura del evento.',k2:'Qué incluye',v2:'Diseño a la medida, confirmación de invitados en tiempo real y mapa del lugar.'},
- presenta:{T:'Tu tarjeta, un escaneo.',P:'Nada de tarjetas impresas que terminan en la basura. Muestras tu QR, lo escanean y te guardan en el celular con todo: tu contacto, tus redes y tu trabajo.',k1:'Para quién',v1:'Personas que viven de darse a conocer y quieren quedar guardadas en un celular en segundos.',k2:'Qué incluye',v2:'Tu página personal, el QR de tu tarjeta y muchas funciones más.'}
+/* ---------- demo: producto > variante ---------- */
+const WA='https://wa.me/50767929782?text=';
+const PROD={
+ tarjetas:{pc:'#FF6B57',ct:'#fff',vars:[
+  {id:'sellos',nom:'Tarjeta de sellos',T:'Cada visita suma un sello.',
+   P:'Tu cliente escanea el QR del mostrador con la cámara del celular y su sello cae solo. Sin apps que descargar ni cartones que se pierden. Toca el botón y míralo en acción.',
+   k1:'Para quién',v1:'Spas, cafés, barberías, tiendas y cualquier negocio donde los clientes vuelven y vale la pena premiarlos.',
+   k2:'Qué incluye',v2:'Tu tarjeta con tu marca, premios a tu medida y un panel para que tu equipo sume y canjee en segundos.',
+   go:['https://tarjetas.holakata.com/t/?n=jazmin','Ver la tarjeta completa →'],act:'Probar: sumar un sello'},
+  {id:'regalo',nom:'Tarjeta de regalo',T:'Un regalo que llega en un sobre.',
+   P:'Tus clientes regalan un monto en dinero. A quien lo recibe le llega por WhatsApp dentro de un sobre con lazo, y se canjea en recepción con un código QR. El saldo se descuenta solo. Toca el lazo para abrirlo.',
+   k1:'Para quién',v1:'Spas, restaurantes, salones y tiendas que quieren vender regalos sin imprimir ni entregar nada.',
+   k2:'Qué incluye',v2:'Tarjeta con tu marca, mensaje personal, fecha de vencimiento y control del saldo desde tu panel.',
+   go:['https://tarjetas.holakata.com/','Conoce las tarjetas →'],act:'Ver el sobre otra vez'}]},
+ menu:{pc:'#F4B860',ct:'#4a3312',vars:[
+  {id:'menu',nom:'Menú digital',T:'Tu carta, siempre al día.',
+   P:'Se acabó reimprimir cartas. Tu menú vive en un enlace y un QR, con tu identidad y tus precios al día. Sirve para restaurantes y para cualquier negocio con lista de precios, como este salón de uñas y pestañas. Toca los servicios para armar una cita.',
+   k1:'Para quién',v1:'Restaurantes, cafeterías, salones, talleres y cualquier negocio con una lista de precios.',
+   k2:'Qué incluye',v2:'Tu carta con tu identidad, descripciones y precios claros, y un botón para que tus clientes te escriban por WhatsApp.',
+   go:['menu/nacar/','Ver el menú completo →']}]},
+ presenta:{pc:'#3E8FD6',ct:'#fff',vars:[
+  {id:'presenta',nom:'Tarjeta de presentación',T:'Tu tarjeta, un escaneo.',
+   P:'Muestras tu QR y te guardan en el celular con todo: tu contacto, tu WhatsApp, tus redes y tu trabajo. Sin tarjetas impresas que terminan en la basura. Desliza la tarjeta de BK Sax y toca sus pestañas.',
+   k1:'Para quién',v1:'Profesionales y artistas que viven de darse a conocer: músicos, fotógrafos, estilistas, abogados.',
+   k2:'Qué incluye',v2:'Tu página personal con tu foto y tu marca, botón para guardar tu contacto, WhatsApp y el QR para compartirla.',
+   go:['https://presenta.holakata.com/bk-sax/','Ver la tarjeta completa →']}]},
+ invita:{pc:'#8E75F0',ct:'#fff',vars:[
+  {id:'invita',nom:'Invitación web',T:'Invitaciones que se sienten como el evento.',
+   P:'Estamos preparando el primer ejemplo. Serán invitaciones web para cumpleaños, bodas y bautizos, con mapa del lugar, confirmación de asistencia por WhatsApp y cuenta regresiva.',
+   k1:'Para quién',v1:'Quienes celebran algo especial y quieren una invitación a la altura del momento.',
+   k2:'Qué incluye',v2:'Diseño a la medida, confirmación de invitados y mapa del lugar.',
+   go:[WA+encodeURIComponent('Hola Kata, me interesa una invitación web. ¿Me avisan cuando esté lista?'),'Avísame cuando esté lista →']}]}
 };
-$('#chips').addEventListener('click',e=>{
- const ch=e.target.closest('.chip');if(!ch)return;
- $$('.chip').forEach(c=>c.classList.remove('on'));ch.classList.add('on');
- const p=ch.dataset.p;
- $$('.pantalla').forEach(s=>s.classList.toggle('on',s.dataset.p===p));
- const t=textos[p];$('#dT').textContent=t.T;$('#dP').textContent=t.P;
- $('#dk1').textContent=t.k1;$('#dv1').textContent=t.v1;$('#dk2').textContent=t.k2;$('#dv2').textContent=t.v2;
- const ex={sellos:['#FF6B57','https://tarjetas.holakata.com/','Conoce kata sellos →'],menu:['#F4B860','menu/','Conoce kata menú →'],invita:['#8E75F0','invita/','Conoce kata invita →'],presenta:['#3E8FD6','https://presenta.holakata.com/','Conoce kata presenta →']}[p];
- $('#demotxt').style.setProperty('--pc',ex[0]);const g=$('#dGo');g.href=ex[1];g.textContent=ex[2];
-});
-
-/* demo sellos */
-const CHECK='<svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5 11-11" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/></svg>';
-let n=5;
-function pintaSellos(){
- $('#grid8').innerHTML=Array.from({length:8},(_,i)=>'<div class="sello'+(i<n?' on':'')+'">'+(i<n?CHECK:'')+'</div>').join('');
+let vActual='sellos',pActual='tarjetas';
+function mostrar(p,v){
+ const pr=PROD[p],vr=pr.vars.find(x=>x.id===v)||pr.vars[0];
+ pActual=p;vActual=vr.id;
+ $$('.chip').forEach(c=>c.classList.toggle('on',c.dataset.p===p));
+ $$('.pantalla').forEach(s=>s.classList.toggle('on',s.dataset.p===vr.id));
+ const box=$('#demotxt');box.style.setProperty('--pc',pr.pc);box.style.setProperty('--ct',pr.ct);
+ $('#vars').innerHTML=pr.vars.length>1?pr.vars.map(x=>'<button type="button" class="vbtn'+(x.id===vr.id?' on':'')+'" data-v="'+x.id+'">'+x.nom+'</button>').join(''):'';
+ $('#dT').textContent=vr.T;$('#dP').textContent=vr.P;
+ $('#dk1').textContent=vr.k1;$('#dv1').textContent=vr.v1;$('#dk2').textContent=vr.k2;$('#dv2').textContent=vr.v2;
+ const g=$('#dGo');g.href=vr.go[0];g.textContent=vr.go[1];
+ const a=$('#dAct');if(vr.act){a.hidden=false;a.textContent=vr.act}else{a.hidden=true}
 }
-pintaSellos();
-$('#scan').addEventListener('click',()=>{
- const toast=$('#toast');
- if(n>=8){n=0;pintaSellos();toast.classList.remove('on');return}
- n++;
- pintaSellos();
- const nuevo=$$('#grid8 .sello')[n-1];nuevo.classList.add('pop');
- if(n>=8){$('#toastT').textContent='¡Premio! Café gratis';$('#toastS').textContent='La recepción lo canjea con su PIN · toca para reiniciar'}
- else{$('#toastT').textContent='¡Sello sumado!';$('#toastS').textContent='Le '+(8-n===1?'falta 1 sello':'faltan '+(8-n)+' sellos')+' para su café gratis'}
- toast.classList.add('on');
-});
+$('#chips').addEventListener('click',e=>{const ch=e.target.closest('.chip');if(ch)mostrar(ch.dataset.p)});
+$('#vars').addEventListener('click',e=>{const b=e.target.closest('.vbtn');if(b)mostrar(pActual,b.dataset.v)});
 
-/* demo menú */
-const MENUS={
- d:[['Tortilla con queso blanco','con café chorreado incluido','B/. 3.75'],['Hojaldre con bistec','el favorito de la casa','B/. 4.50'],['Bollo con huevo frito','receta de la abuela','B/. 3.25']],
- a:[['Sancocho de gallina','con arroz blanco y culantro','B/. 5.50'],['Arroz con pollo','viernes solamente','B/. 4.75'],['Pescado frito con patacones','corvina del día','B/. 6.90']],
- b:[['Chicha de saril','jengibre opcional','B/. 1.50'],['Café chorreado','de Boquete','B/. 1.25'],['Raspao de la casa','miel y leche condensada','B/. 2.00']]
-};
-function pintaMenu(m){
- $('#platos').innerHTML=MENUS[m].map(p=>'<div class="plato"><div><div class="pn">'+p[0]+'</div><div class="pd">'+p[1]+'</div></div><div class="pr">'+p[2]+'</div></div>').join('');
+/* sellos (Jazmin Center) */
+let jz=2;
+const REGALO='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8c-2-4-6-3-5 0M12 8c2-4 6-3 5 0"/></svg>';
+const CHECK2='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0b6a89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+function pintarSellos(){
+ let h='';
+ for(let i=1;i<=10;i++){
+  if(i<=jz)h+='<div class="s ok">'+CHECK2+'</div>';
+  else if(i===4)h+='<div class="s esp">50%</div>';
+  else if(i===10)h+='<div class="s esp">'+REGALO+'</div>';
+  else h+='<div class="s"></div>';
+ }
+ $('#jz-sellos').innerHTML=h;$('#jz-n').textContent=jz;
 }
-pintaMenu('d');
-$('#mtabs').addEventListener('click',e=>{
- const t=e.target.closest('.mtab');if(!t)return;
- $$('.mtab').forEach(x=>x.classList.remove('on'));t.classList.add('on');pintaMenu(t.dataset.m);
+pintarSellos();
+
+/* regalo (Jazmin Center): sobre con lazo */
+const gfEsc=$('#gf-escena');let gfT=[];
+function abrirRegalo(){
+ if(gfEsc.classList.contains('desata'))return;
+ gfEsc.classList.add('desata');
+ gfT.push(setTimeout(()=>gfEsc.classList.add('abre'),550));
+ gfT.push(setTimeout(()=>gfEsc.classList.add('sale'),1250));
+ gfT.push(setTimeout(()=>gfEsc.classList.add('fin'),2150));
+ gfT.push(setTimeout(()=>gfEsc.classList.add('fuera'),2750));
+}
+$('#gf-sobre').addEventListener('click',abrirRegalo);
+function reiniciarRegalo(){gfT.forEach(clearTimeout);gfT=[];gfEsc.classList.remove('desata','abre','sale','fin','fuera');$('#gf').scrollTop=0}
+
+/* botón de acción debajo del texto */
+$('#dAct').addEventListener('click',()=>{
+ if(vActual==='sellos'){jz=jz>=10?1:jz+1;pintarSellos()}
+ else if(vActual==='regalo'){reiniciarRegalo()}
 });
 
-/* demo invita */
-$('#invscene').addEventListener('click',()=>{
- const sc=$('#invscene');sc.classList.toggle('inv-open');
- $('#invhint').textContent=sc.classList.contains('inv-open')?'Toca otra vez para cerrarlo':'Toca el sobre';
+/* presenta (BK Sax): pestañas */
+$$('.bk .tabs button').forEach(b=>b.addEventListener('click',()=>{
+ $$('.bk .tabs button').forEach(x=>x.classList.remove('act'));b.classList.add('act');
+ $$('.bk .bpanel').forEach(p=>p.classList.toggle('act',p.id===b.dataset.p));
+}));
+
+/* menú (Nácar): resumido */
+const SEC=[
+ {t:'Uñas',n:'Todas incluyen cuidado de cutícula.',it:[['Manicure tradicional','Limado, cutículas y esmalte',40,8],['Semipermanente','Dura de 2 a 3 semanas',50,15],['Acrílicas, set completo','Almendra, cuadrada o coffin',120,35]]},
+ {t:'Pestañas',n:'Curvatura C o D, de 8 a 13 mm.',it:[['Clásicas 1 a 1','Una extensión por pestaña',120,35],['Híbridas','Clásicas y volumen mezclados',135,42],['Volumen ruso','Abanicos de 3 a 5 puntas',150,50]]},
+ {t:'Combos',n:'Pagas menos que por separado.',it:[['Mani + pedi semipermanente','Ahorras B/. 3',105,32]]}
+];
+const sel={};
+const tiempo=m=>{const h=Math.floor(m/60),r=m%60;return h?h+' h'+(r?' '+r+' min':''):r+' min'};
+$('#nx-lista').innerHTML=SEC.map((s,si)=>'<h5>'+s.t+'</h5><p class="nt">'+s.n+'</p>'+s.it.map((x,i)=>
+ '<button type="button" class="it" data-k="'+si+'-'+i+'" aria-pressed="false"><span class="a">'+x[0]+'</span><span class="c">B/. '+x[3]+'</span><span class="d" aria-hidden="true">+</span><span class="b">'+x[1]+' · '+tiempo(x[2])+'</span></button>').join('')).join('');
+$('#nx-lista').addEventListener('click',e=>{
+ const b=e.target.closest('.it');if(!b)return;
+ const k=b.dataset.k;
+ if(sel[k]){delete sel[k];b.setAttribute('aria-pressed','false');b.querySelector('.d').textContent='+'}
+ else{sel[k]=true;b.setAttribute('aria-pressed','true');b.querySelector('.d').textContent='✓'}
+ let tot=0,mins=0;const keys=Object.keys(sel);
+ keys.forEach(q=>{const p=q.split('-'),x=SEC[+p[0]].it[+p[1]];tot+=x[3];mins+=x[2]});
+ $('#nx-res').innerHTML=keys.length?'<strong>B/. '+tot+'</strong>'+keys.length+(keys.length===1?' servicio':' servicios')+' · '+tiempo(mins):'<strong>Tu cita</strong>Toca un servicio';
 });
 
-/* demo presenta */
-$('#pguardar').addEventListener('click',()=>{$('#guardado').classList.add('on');setTimeout(()=>$('#guardado').classList.remove('on'),2600)});
 </script>
 </body>
 </html>
